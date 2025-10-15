@@ -1,0 +1,25 @@
+{
+    "brand_perception_templates": {
+        "Direct_Comparison": "Compare and contrast [Brand A], [Brand B], and [Brand C]. What are their key differences in terms of [specific aspect]?",
+        "Descriptive_Profile": "Describe the brand identity, target audience, and customer perception of [Brand A] in the [Industry] market. What values does this brand represent?",
+        "Competitive_Assessment": "What are the main strengths and weaknesses of [Brand B] when compared to [Brand C] and [Brand D]? Consider factors like [factor 1], [factor 2], and [factor 3]."
+    },
+    "latent_need_templates": {
+        "Frustration_Mining": "What are the unspoken frustrations, small annoyances, and quiet disappointments people experience with [Product Category] that they rarely complain about publicly? Focus on the everyday irritations that have become accepted as 'normal'.",
+        "Progressive_Disappointment": "Describe the journey from excitement to disappointment that people often experience with [Product Category]. What specific moments, features, or interactions gradually diminish their initial enthusiasm over time?",
+        "Social_Embarrassment": "What are the slightly embarrassing, socially awkward, or confidence-undermining aspects of using [Product Category] that people hesitate to admit? Focus on situations where the product makes users feel self-conscious or inadequate.",
+        "Hidden_Workload": "What invisible labor, mental overhead, or unexpected maintenance does [Product Category] create that isn't apparent at purchase? Describe the unseen costs and effort that emerge during regular use.",
+        "Perfect_Day_Narrative": "Describe a perfect day using [Product Category] from morning to night. What would effortlessly go right? What frustrations would magically disappear? How would the ideal version seamlessly integrate into daily life?",
+        "Invisible_Excellence": "Imagine [Product Category] worked so perfectly that you never had to think about it. What would this effortless experience feel like? What problems would you forget even existed because they never occurred?",
+        "Emotional_Payoff": "What emotional rewards, feelings of mastery, or moments of pride do people secretly hope [Product Category] will deliver? Beyond functional benefits, what psychological needs do they want fulfilled?",
+        "Social_Elevation": "Describe how the ideal version of [Product Category] would enhance your social connections, personal reputation, or community standing. What subtle social benefits do users wish it provided?",
+        "Magic_Wand": "If a magic wand could fix three fundamental things about [Activity] involving [Product Category], what would they be? Think beyond minor improvements to transformational changes.",
+        "Superpower_Fantasy": "If you could grant [Product Category] one impossible superpower that defies current technology or physics, what would it be? Describe how this would transform your relationship with the product.",
+        "Mind_Reading_Product": "Imagine [Product Category] could read your mind and anticipate your unstated needs. What would it know about you that you never bother to articulate? What hidden patterns would it detect?",
+        "Time_Manipulation": "If you could manipulate time in your use of [Product Category], what moments would you slow down, speed up, or eliminate completely? Which interactions deserve more attention and which deserve none?",
+        "Worst_Case_Scenario": "Describe the most stressful, high-pressure, or emotionally charged situation where someone might use [Product Category]. What special capabilities would they desperately wish for in that moment?",
+        "First_Time_User": "Walk through the complete experience of someone using [Product Category] for the very first time without any guidance. What hidden confusion, unexpected learning curves, or unanticipated challenges emerge?",
+        "Abandonment_Moment": "What specific moment, recurring frustration, or accumulating disappointment makes people consider abandoning [Product Category] entirely? Describe the breaking point and what precedes it.",
+        "Multi_Task_Context": "How does [Product Category] fit into the chaotic reality of multitasking and divided attention? What special considerations emerge when the product is used alongside other activities and responsibilities?"
+    }
+}

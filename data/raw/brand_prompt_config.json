@@ -1,0 +1,81 @@
+{
+    "brands": [
+        "Apple",
+        "Samsung",
+        "Google",
+        "Huawei",
+        "Xiaomi"
+    ],
+    "industries": [
+        "global smartphone market",
+        "premium laptop market",
+        "smartwatch and wearable tech industry",
+        "smart home ecosystem space",
+        "consumer electronics sector"
+    ],
+    "personas": [
+        "As a millennial consumer",
+        "As a Gen-Z tech enthusiast",
+        "As a business professional",
+        "As a sustainability-conscious buyer",
+        "As a design-focused creative",
+        "As a price-sensitive shopper",
+        "As a privacy-conscious user",
+        "From the perspective of an industry analyst",
+        "As a smartphone reviewer",
+        "As a photographer who relies on mobile cameras"
+    ],
+    "comparison_factors": [
+        "product quality and reliability",
+        "performance and speed",
+        "battery life",
+        "camera system and image quality",
+        "software integration and ecosystem connectivity",
+        "innovation and R&D leadership",
+        "design aesthetics and visual identity",
+        "user interface and usability",
+        "brand prestige and social status",
+        "pricing and value for money",
+        "environmental sustainability practices",
+        "corporate ethics and data privacy",
+        "after-sales support and service reliability"
+    ],
+    "temporal_modifiers": [
+        "historically speaking",
+        "in recent years",
+        "based on current market positioning",
+        "looking toward future trends",
+        "during the 2020s tech evolution"
+    ],
+    "product_categories": [
+        "smartphones",
+        "laptops",
+        "smartwatches",
+        "wireless earbuds",
+        "smart home devices",
+        "AI assistants",
+        "cloud storage platforms"
+    ],
+    "usage_contexts": [
+        "for busy professionals",
+        "for students",
+        "for elderly users",
+        "for parents",
+        "while traveling",
+        "during work hours",
+        "in social gatherings",
+        "during workouts",
+        "in low-signal environments",
+        "after one year of use"
+    ],
+    "activities": [
+        "taking photos",
+        "charging devices",
+        "syncing data",
+        "video calling",
+        "daily commuting with tech devices",
+        "managing notifications",
+        "using cloud services",
+        "setting up new devices"
+    ]
+}
