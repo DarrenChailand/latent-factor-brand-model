@@ -14,16 +14,16 @@
         "consumer electronics sector"
     ],
     "personas": [
-        "As a millennial consumer",
-        "As a Gen-Z tech enthusiast",
-        "As a business professional",
-        "As a sustainability-conscious buyer",
-        "As a design-focused creative",
-        "As a price-sensitive shopper",
-        "As a privacy-conscious user",
-        "From the perspective of an industry analyst",
-        "As a smartphone reviewer",
-        "As a photographer who relies on mobile cameras"
+        "as a millennial consumer",
+        "as a Gen-Z tech enthusiast",
+        "as a business professional",
+        "as a sustainability-conscious buyer",
+        "as a design-focused creative",
+        "as a price-sensitive shopper",
+        "as a privacy-conscious user",
+        "from the perspective of an industry analyst",
+        "as a smartphone reviewer",
+        "as a photographer who relies on mobile cameras"
     ],
     "comparison_factors": [
         "product quality and reliability",
@@ -48,34 +48,29 @@
         "during the 2020s tech evolution"
     ],
     "product_categories": [
-        "smartphones",
-        "laptops",
-        "smartwatches",
-        "wireless earbuds",
-        "smart home devices",
-        "AI assistants",
-        "cloud storage platforms"
+    "smartphones",
+    "laptops",
+    "smartwatches",
+    "wireless earbuds",
+    "smart home devices",
+    "AI assistants",
+    "cloud storage platforms"
+    ],
+    "demographic_targets": [
+        " for busy parents",
+        " for elderly users",
+        " for digital natives",
+        " for professionals in high-stress jobs"
     ],
     "usage_contexts": [
-        "for busy professionals",
-        "for students",
-        "for elderly users",
-        "for parents",
-        "while traveling",
-        "during work hours",
-        "in social gatherings",
-        "during workouts",
-        "in low-signal environments",
-        "after one year of use"
+        " during morning routines",
+        " while traveling",
+        " in social settings",
+        " under time pressure"
     ],
-    "activities": [
-        "taking photos",
-        "charging devices",
-        "syncing data",
-        "video calling",
-        "daily commuting with tech devices",
-        "managing notifications",
-        "using cloud services",
-        "setting up new devices"
+    "temporal_framing": [
+        " in the first month of use",
+        " after one year of ownership",
+        " during seasonal changes"
     ]
 }
