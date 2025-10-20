@@ -1,3 +1,3 @@
 
 # large generated artifacts
-data/processed/*.json
+/data/processed/Appendix_A_generated_prompts.json
