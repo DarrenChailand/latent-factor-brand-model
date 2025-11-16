@@ -7,7 +7,7 @@ def replace_placeholders(text, mapping):
     return re.sub(r"\[(.*?)\]", lambda m: mapping.get(m.group(1), m.group(0)), text)
 
 # --- Load configs
-with open("data/raw/brand_prompt_config.json", "r") as f:
+with open("data/raw/demo_brand_prompt_config.json", "r") as f:
     config = json.load(f)
 
 with open("data/raw/brand_prompt_templates.json", "r") as f:
@@ -44,7 +44,7 @@ for i1 in template_appendix_b:
                     generated_prompts.append(base_template)
 
 # --- Save results to JSON and TXT
-output_dir = "data/processed"
+output_dir = "data/processed/prompts"
 os.makedirs(output_dir, exist_ok=True)
 
 json_path = os.path.join(output_dir, "Appendix_B_generated_prompts.json")

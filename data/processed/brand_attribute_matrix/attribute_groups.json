@@ -1,0 +1,107 @@
+[
+  {
+    "canonical": "battery life",
+    "members": [
+      "battery",
+      "battery life",
+      "iphone battery"
+    ]
+  },
+  {
+    "canonical": "display",
+    "members": [
+      "display",
+      "displays",
+      "screen",
+      "quality display"
+    ]
+  },
+  {
+    "canonical": "camera",
+    "members": [
+      "camera",
+      "cameras"
+    ]
+  },
+  {
+    "canonical": "performance",
+    "members": [
+      "processing power",
+      "gpu performance"
+    ]
+  },
+  {
+    "canonical": "ui interface",
+    "members": [
+      "ui interface",
+      "user interface"
+    ]
+  },
+  {
+    "canonical": "security",
+    "members": [
+      "privacy",
+      "security"
+    ]
+  },
+  {
+    "canonical": "touchscreen",
+    "members": [
+      "touch",
+      "touchscreen",
+      "touchscreens"
+    ]
+  },
+  {
+    "canonical": "gpu",
+    "members": [
+      "gpus"
+    ]
+  },
+  {
+    "canonical": "imaging",
+    "members": [
+      "camera",
+      "lens",
+      "imaging"
+    ]
+  },
+  {
+    "canonical": "durability",
+    "members": [
+      "durability"
+    ]
+  },
+  {
+    "canonical": "resolution",
+    "members": [
+      "resolution"
+    ]
+  },
+  {
+    "canonical": "smartphone",
+    "members": [
+      "smartwatch",
+      "wearables"
+    ]
+  },
+  {
+    "canonical": "charging",
+    "members": [
+      "charging",
+      "magsafe charging"
+    ]
+  },
+  {
+    "canonical": "sensor",
+    "members": [
+      "sensor"
+    ]
+  },
+  {
+    "canonical": "foldable",
+    "members": [
+      "foldable"
+    ]
+  }
+]

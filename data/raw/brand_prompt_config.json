@@ -1,4 +1,5 @@
 {
+    "_1comment": "Minimum of 3 brands",
     "brands": [
         "Apple",
         "Samsung",
@@ -6,6 +7,8 @@
         "Huawei",
         "Xiaomi"
     ],
+
+    "_2comment": "Minimum of 1 industry",
     "industries": [
         "global smartphone market",
         "premium laptop market",
@@ -13,6 +16,8 @@
         "smart home ecosystem space",
         "consumer electronics sector"
     ],
+
+    "_3comment": "Minimum of 0 personas",
     "personas": [
         "as a millennial consumer",
         "as a Gen-Z tech enthusiast",
@@ -25,6 +30,8 @@
         "as a smartphone reviewer",
         "as a photographer who relies on mobile cameras"
     ],
+
+    "_4comment": "Minimum of 3 factors",
     "comparison_factors": [
         "product quality and reliability",
         "performance and speed",
@@ -40,6 +47,8 @@
         "corporate ethics and data privacy",
         "after-sales support and service reliability"
     ],
+
+    "_5comment": "Minimum of 0 temporal modifiers",
     "temporal_modifiers": [
         "historically speaking",
         "in recent years",
@@ -47,27 +56,35 @@
         "looking toward future trends",
         "during the 2020s tech evolution"
     ],
+
+    "_6comment": "Minimum of 3 product categories",
     "product_categories": [
-    "smartphones",
-    "laptops",
-    "smartwatches",
-    "wireless earbuds",
-    "smart home devices",
-    "AI assistants",
-    "cloud storage platforms"
+        "smartphones",
+        "laptops",
+        "smartwatches",
+        "wireless earbuds",
+        "smart home devices",
+        "AI assistants",
+        "cloud storage platforms"
     ],
+
+    "_7comment": "Minimum of 0 demographic targets",
     "demographic_targets": [
         " for busy parents",
         " for elderly users",
         " for digital natives",
         " for professionals in high-stress jobs"
     ],
+
+    "_8comment": "Minimum of 0 usage contexts",
     "usage_contexts": [
         " during morning routines",
         " while traveling",
         " in social settings",
         " under time pressure"
     ],
+
+    "_9comment": "Minimum of 0 temporal framing",
     "temporal_framing": [
         " in the first month of use",
         " after one year of ownership",

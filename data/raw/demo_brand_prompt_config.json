@@ -1,0 +1,56 @@
+{
+    "_1comment": "Minimum of 3 brands",
+    "brands": [
+        "Apple",
+        "Samsung",
+        "Google"
+    ],
+
+    "_2comment": "Minimum of 1 industry",
+    "industries": [
+        "global smartphone market"
+    ],
+
+    "_3comment": "Minimum of 0 personas",
+    "personas": [
+        "as a millennial consumer",
+        "as a Gen-Z tech enthusiast",
+        "as a business professional"
+    ],
+
+    "_4comment": "Minimum of 3 factors",
+    "comparison_factors": [
+        "product quality and reliability",
+        "performance and speed",
+        "battery life"
+    ],
+
+    "_5comment": "Minimum of 0 temporal modifiers",
+    "temporal_modifiers": [
+        "historically speaking",
+        "in recent years",
+        "based on current market positioning"
+    ],
+
+    "_6comment": "Minimum of 3 product categories",
+    "product_categories": [
+        "smartphones",
+        "laptops",
+        "smartwatches"
+    ],
+
+    "_7comment": "Minimum of 0 demographic targets",
+    "demographic_targets": [
+
+    ],
+
+    "_8comment": "Minimum of 0 usage contexts",
+    "usage_contexts": [
+
+    ],
+
+    "_9comment": "Minimum of 0 temporal framing",
+    "temporal_framing": [
+
+    ]
+}
