@@ -7,30 +7,30 @@ absence,DROP
 absolute,DROP
 acceleration,DROP
 access,DROP
-accessibility,DROP
-accessible,DROP
-accessory,DROP
+accessibility,KEEP
+accessible,KEEP
+accessory,KEEP
 accidental,DROP
 acclaim,DROP
 account,DROP
 accountability,DROP
-accuracy,DROP
-accurate,DROP
+accuracy,KEEP
+accurate,KEEP
 acquisition,DROP
 action,DROP
 active,DROP
 activity,DROP
 actual,DROP
 ad,DROP
-adaptability,DROP
-adaptable,DROP
+adaptability,KEEP
+adaptable,KEEP
 adaptation,DROP
-adapter,DROP
+adapter,KEEP
 adaptive,DROP
 addition,DROP
 additional,DROP
 address,DROP
-adequate,DROP
+adequate,KEEP
 adhesive,DROP
 adjustment,DROP
 admirable,DROP
@@ -48,14 +48,14 @@ advertising,DROP
 advice,DROP
 advocacy,DROP
 adwords,DROP
-aesthetic,DROP
+aesthetic,KEEP
 afc,DROP
 affect,DROP
 affecting,DROP
 affinity,DROP
 affluent,DROP
-affordability,DROP
-affordable,DROP
+affordability,KEEP
+affordable,KEEP
 aficionado,DROP
 africa,DROP
 age,DROP
@@ -63,20 +63,20 @@ aged,DROP
 aggressive,DROP
 agile,DROP
 agility,DROP
-ai,DROP
+ai,KEEP
 ai assistant,KEEP
 air,DROP
-airdrop,DROP
+airdrop,KEEP
 airpods,DROP
 airpower,DROP
-algorithm,DROP
-algorithms,DROP
+algorithm,KEEP
+algorithms,KEEP
 align,DROP
 allen,DROP
 allow,DROP
 alphabet,DROP
 alternative,DROP
-aluminum,DROP
+aluminum,KEEP
 amd,DROP
 america,DROP
 american,DROP
@@ -86,26 +86,26 @@ amount,DROP
 ample,DROP
 analysis,DROP
 analytic,DROP
-android,DROP
-android device,DROP
-android interface,DROP
-android operating system,DROP
+android,KEEP
+android device,KEEP
+android interface,KEEP
+android operating system,KEEP
 android product,DROP
 andsamsung,DROP
 angle,DROP
 angular,DROP
-animation,DROP
+animation,KEEP
 announcement,DROP
-annoying,DROP
+annoying,KEEP
 annual,DROP
 answer,DROP
 antitrust,DROP
-aperture,DROP
-app,DROP
+aperture,KEEP
+app,KEEP
 apparent,DROP
 appeal,DROP
-appealing,DROP
-appearance,DROP
+appealing,KEEP
+appearance,KEEP
 apple device,DROP
 apple iphones,DROP
 apple product,DROP
@@ -114,9 +114,9 @@ applicable,DROP
 application,DROP
 approach,DROP
 approachability,DROP
-approachable,DROP
+approachable,KEEP
 approximate,DROP
-apps,DROP
+apps,KEEP
 ar,DROP
 arcade,DROP
 architecture,DROP
@@ -131,30 +131,30 @@ arts,DROP
 asia,DROP
 aspect,DROP
 asphalt,DROP
-aspirational,DROP
+aspirational,KEEP
 assessment,DROP
 assist,DROP
 assistance,DROP
-assistant,DROP
+assistant,KEEP
 association,DROP
 assurance,DROP
 attachment,DROP
 attack,DROP
 attention,DROP
-attractive,DROP
+attractive,KEEP
 attribute,DROP
 audience,DROP
-audio,DROP
+audio,KEEP
 augmented,DROP
 australia,DROP
-authentication,DROP
+authentication,KEEP
 authenticity,DROP
 authority,DROP
 authorized,DROP
 auto,DROP
 autofocus,KEEP
-automation,DROP
-autonomous,DROP
+automation,KEEP
+autonomous,KEEP
 availability,DROP
 available,DROP
 average,DROP
@@ -162,14 +162,14 @@ aware,DROP
 back,DROP
 background,DROP
 backrub,DROP
-backup,DROP
-backups,DROP
-bad,DROP
+backup,KEEP
+backups,KEEP
+bad,KEEP
 bag,DROP
 balance,DROP
 balanced,DROP
 bank,DROP
-banking,DROP
+banking,KEEP
 bar,DROP
 barrier,DROP
 base,DROP
@@ -177,10 +177,10 @@ basic,DROP
 basis,DROP
 battery,KEEP
 battery capacity,KEEP
-battery drain,DROP
+battery drain,KEEP
 battery life,KEEP
 battle,DROP
-beautiful,DROP
+beautiful,KEEP
 beginner,DROP
 beginning,DROP
 behemoth,DROP
@@ -188,41 +188,41 @@ bell,DROP
 benchmark,DROP
 benchmarks,DROP
 bend,DROP
-bendable,DROP
+bendable,KEEP
 beneficial,DROP
 beneficiary,DROP
 benefit,DROP
 best,DROP
 bet,DROP
 beta,DROP
-bezel,DROP
-biased,DROP
+bezel,KEEP
+biased,KEEP
 big,DROP
 bill,DROP
 biometric,KEEP
 bionic,DROP
-bionic chip,DROP
+bionic chip,KEEP
 bipolar,DROP
 bit,DROP
 bite,DROP
-bixby,DROP
+bixby,KEEP
 black,DROP
-bland,DROP
+bland,KEEP
 blazing,DROP
 blend,DROP
-bloat,DROP
-bloatware,DROP
+bloat,KEEP
+bloatware,KEEP
 blue,DROP
-bluetooth,DROP
+bluetooth,KEEP
 board,DROP
 boasted,DROP
 boasts,DROP
 body,DROP
-bokeh,DROP
+bokeh,KEEP
 bold,DROP
 boost,DROP
 boot,DROP
-boring,DROP
+boring,KEEP
 bottlenecked,DROP
 boundary,DROP
 box,DROP
@@ -234,45 +234,45 @@ breadth,DROP
 breakdown,DROP
 brick,DROP
 brief,DROP
-bright,DROP
-brightness,DROP
+bright,KEEP
+brightness,KEEP
 brin,DROP
 broad,DROP
-browser,DROP
-browsing,DROP
+browser,KEEP
+browsing,KEEP
 bubble,DROP
 budget,DROP
 buds,DROP
 bug,DROP
-buggy,DROP
-build,DROP
-build quality,DROP
+buggy,KEEP
+build,KEEP
+build quality,KEEP
 building,DROP
 buildup,DROP
-bulkier,DROP
-bulky,DROP
+bulkier,KEEP
+bulky,KEEP
 burn,DROP
 burnout,DROP
 business,DROP
 busy,DROP
 butqualcomm,DROP
-button,DROP
+button,KEEP
 buy,DROP
 buyer,DROP
 byung,DROP
 c,DROP
-cable,DROP
+cable,KEEP
 cadmium,DROP
-calendar,DROP
-calibration,DROP
+calendar,KEEP
+calibration,KEEP
 california,DROP
 call,DROP
 calling,DROP
 calmness,DROP
 camera,KEEP
-camera app,DROP
-camera capability,DROP
-camera hardware,DROP
+camera app,KEEP
+camera capability,KEEP
+camera hardware,KEEP
 cameras,KEEP
 campaign,DROP
 canada,DROP
@@ -280,29 +280,29 @@ cancellation,DROP
 capabilities,DROP
 capability,DROP
 capable,DROP
-capacity,DROP
-capacity loss rate,DROP
+capacity,KEEP
+capacity loss rate,KEEP
 capture,DROP
 car,DROP
 card,DROP
-card slot,DROP
+card slot,KEEP
 care,DROP
 careful,DROP
 carrier,DROP
 case,DROP
-casing,DROP
+casing,KEEP
 casual,DROP
 catastrophic,DROP
 category,DROP
 cater,DROP
 cause,DROP
 caveat,DROP
-cellular,DROP
-censorship,DROP
+cellular,KEEP
+censorship,KEEP
 center,DROP
 centric,DROP
 centricity,DROP
-ceramic,DROP
+ceramic,KEEP
 certain,DROP
 certification,DROP
 chain,DROP
@@ -314,16 +314,16 @@ change,DROP
 changer,DROP
 channel,DROP
 characteristic,DROP
-charge,DROP
-charge level,DROP
-charger,DROP
+charge,KEEP
+charge level,KEEP
+charger,KEEP
 charging,KEEP
 chart,DROP
-chat,DROP
-cheap,DROP
+chat,KEEP
+cheap,KEEP
 check,DROP
 chemistry,DROP
-chic,DROP
+chic,KEEP
 child,DROP
 children,DROP
 china,DROP
@@ -337,41 +337,41 @@ chrome,DROP
 chrome device,DROP
 chromebook,DROP
 chromebooks,DROP
-chromecast,DROP
+chromecast,KEEP
 chul,DROP
 cinebench,DROP
 circle,DROP
 circuit,DROP
 circular,DROP
 claim,DROP
-clarity,DROP
+clarity,KEEP
 class,DROP
 classic,DROP
 clean,DROP
 cleanliness,DROP
 clear,DROP
 client,DROP
-clock,DROP
+clock,KEEP
 close,DROP
 closed,DROP
-cloud,DROP
-clunky,DROP
-clutter,DROP
-cluttered,DROP
+cloud,KEEP
+clunky,KEEP
+clutter,KEEP
+cluttered,KEEP
 cnet,DROP
-coating,DROP
+coating,KEEP
 cohesion,DROP
 cohesive,DROP
-collaboration,DROP
-collaborative,DROP
+collaboration,KEEP
+collaborative,KEEP
 collection,DROP
 college,DROP
-color,DROP
-color option,DROP
-colorful,DROP
+color,KEEP
+color option,KEEP
+colorful,KEEP
 combination,DROP
-comfort,DROP
-comfortable,DROP
+comfort,KEEP
+comfortable,KEEP
 command,DROP
 commerce,DROP
 commitment,DROP
@@ -379,12 +379,12 @@ committed,DROP
 common,DROP
 community,DROP
 commute,DROP
-compact,DROP
+compact,KEEP
 company,DROP
 comparable,DROP
 comparison,DROP
 compatibility,KEEP
-compatible,DROP
+compatible,KEEP
 compelling,DROP
 competition,DROP
 competitive,DROP
@@ -394,14 +394,14 @@ competitors,DROP
 complaint,DROP
 complete,DROP
 complex,DROP
-complexity,DROP
-complicated,DROP
+complexity,KEEP
+complicated,KEEP
 component,DROP
 components,DROP
 comprehensive,DROP
 compromise,DROP
 computational,DROP
-computer,DROP
+computer,KEEP
 computing,DROP
 con,DROP
 concept,DROP
@@ -416,22 +416,22 @@ condition,DROP
 confidence,DROP
 confident,DROP
 configuration,DROP
-confusing,DROP
+confusing,KEEP
 confusion,DROP
 conglomerate,DROP
 connected,DROP
-connection,DROP
-connectivity,DROP
-connector,DROP
+connection,KEEP
+connectivity,KEEP
+connector,KEEP
 cons,DROP
 conscious,DROP
 consensus,DROP
 conservative,DROP
 consideration,DROP
 considerations,DROP
-consistency,DROP
-consistent,DROP
-console,DROP
+consistency,KEEP
+consistent,KEEP
+console,KEEP
 constant,DROP
 constraint,DROP
 construction,DROP
@@ -450,50 +450,50 @@ continual,DROP
 continuity,DROP
 continuous,DROP
 continuously,DROP
-contrast,DROP
+contrast,KEEP
 contrasting,DROP
 contribute,DROP
 control,DROP
 controversy,DROP
-convenience,DROP
-convenient,DROP
-conversational,DROP
+convenience,KEEP
+convenient,KEEP
+conversational,KEEP
 cook,DROP
 cool,DROP
 copy,DROP
 core,DROP
-cores,DROP
+cores,KEEP
 corporation,DROP
 cortex,DROP
 cosmetic,DROP
-cost,DROP
-costly,DROP
+cost,KEEP
+costly,KEEP
 council,DROP
 count,DROP
 counterpart,DROP
 country,DROP
-coverage,DROP
+coverage,KEEP
 coveted,DROP
 cpu,KEEP
-cpu performance,DROP
+cpu performance,KEEP
 crack,DROP
 cracking,DROP
-craftsmanship,DROP
-crash,DROP
+craftsmanship,KEEP
+crash,KEEP
 cream,DROP
 creation,DROP
 creative,DROP
 creativity,DROP
 creator,DROP
-credibility,DROP
-crisp,DROP
+credibility,KEEP
+crisp,KEEP
 criterion,DROP
 critic,DROP
 critical,DROP
 criticism,DROP
 cross,DROP
 crucial,DROP
-cuda,DROP
+cuda,KEEP
 culture,DROP
 cupertino,DROP
 curiosity,DROP
@@ -503,18 +503,18 @@ curve,DROP
 curved,DROP
 custom,DROP
 customer,DROP
-customer support,DROP
-customizability,DROP
-customizable,DROP
-customization,DROP
-customization option,DROP
-customizeable,DROP
+customer support,KEEP
+customizability,KEEP
+customizable,KEEP
+customization,KEEP
+customization option,KEEP
+customizeable,KEEP
 customizing,DROP
 cut,DROP
 cutoff,DROP
 cutting,DROP
 cyber,DROP
-cybersecurity,DROP
+cybersecurity,KEEP
 cycle,DROP
 daily,DROP
 damage,DROP
@@ -532,7 +532,7 @@ debacle,DROP
 debate,DROP
 debut,DROP
 decade,DROP
-decent,DROP
+decent,KEEP
 decision,DROP
 decline,DROP
 dedicated,DROP
@@ -541,7 +541,7 @@ deep,DROP
 deepmind,DROP
 default,DROP
 defect,DROP
-defective,DROP
+defective,KEEP
 definitive,DROP
 degradation,DROP
 degree,DROP
@@ -559,30 +559,30 @@ demographics,DROP
 density,DROP
 dent,DROP
 department,DROP
-dependable,DROP
+dependable,KEEP
 dependence,DROP
 dependent,DROP
 deployment,DROP
 depth,DROP
 description,DROP
 deserved,DROP
-design,DROP
-design flaw,DROP
+design,KEEP
+design flaw,KEEP
 designer,DROP
 designing,DROP
-designs,DROP
-desirable,DROP
-desktop,DROP
+designs,KEEP
+desirable,KEEP
+desktop,KEEP
 destination,DROP
 detail,DROP
 detailed,DROP
-detection,DROP
+detection,KEEP
 deterrent,DROP
 developer,DROP
 developers,DROP
 development,DROP
 device,DROP
-device ecosystem,DROP
+device ecosystem,KEEP
 devices,DROP
 dex,DROP
 difference,DROP
@@ -590,7 +590,7 @@ differences,DROP
 different,DROP
 differentiator,DROP
 differentiators,DROP
-difficult,DROP
+difficult,KEEP
 difficulty,DROP
 digging,DROP
 digital,DROP
@@ -598,7 +598,7 @@ dimensity,DROP
 direct,DROP
 disability,DROP
 disadvantage,DROP
-disappointing,DROP
+disappointing,KEEP
 disaster,DROP
 discharge,DROP
 disconnected,DROP
@@ -606,12 +606,12 @@ discount,DROP
 discover,DROP
 discovery,DROP
 discussion,DROP
-disjointed,DROP
+disjointed,KEEP
 display,KEEP
 displays,KEEP
 disposable,DROP
 disruption,DROP
-dissatisfaction,DROP
+dissatisfaction,KEEP
 distinct,DROP
 distinctive,DROP
 distraction,DROP
@@ -630,7 +630,7 @@ dominant,DROP
 dos,DROP
 double,DROP
 download,DROP
-downtime,DROP
+downtime,KEEP
 doze,DROP
 dozing,DROP
 drain,DROP
@@ -647,26 +647,26 @@ drop,DROP
 dropout,DROP
 dual,DROP
 durability,KEEP
-durable,DROP
+durable,KEEP
 duration,DROP
-dust,DROP
+dust,KEEP
 dynamic,DROP
 dynamics,DROP
 dynamism,DROP
 e,DROP
 eager,DROP
-earbud,DROP
+earbud,KEEP
 early,DROP
 earth,DROP
 ease,DROP
 east,DROP
-easy,DROP
+easy,KEEP
 eco,DROP
-ecological,DROP
+ecological,KEEP
 economic,DROP
 economy,DROP
-ecosystem,DROP
-ecosystem integration,DROP
+ecosystem,KEEP
+ecosystem integration,KEEP
 edge,DROP
 edgy,DROP
 editing,DROP
@@ -674,20 +674,20 @@ editor,DROP
 education,DROP
 educational,DROP
 effect,DROP
-effective,DROP
-effectiveness,DROP
-efficiency,DROP
-efficient,DROP
+effective,KEEP
+effectiveness,KEEP
+efficiency,KEEP
+efficient,KEEP
 effort,DROP
-effortless,DROP
+effortless,KEEP
 elaborate,DROP
 electronic,DROP
 electronics,DROP
-elegance,DROP
-elegant,DROP
+elegance,KEEP
+elegant,KEEP
 element,DROP
 elevated,DROP
-email,DROP
+email,KEEP
 emerge,DROP
 emotional,DROP
 emphasis,DROP
@@ -695,22 +695,22 @@ emphasize,DROP
 employs,DROP
 empowerment,DROP
 enclave,DROP
-encryption,DROP
+encryption,KEEP
 end,DROP
 end camera,DROP
 end device,DROP
 end option,DROP
-endurance,DROP
+endurance,KEEP
 energy,DROP
 engagement,DROP
-engine,DROP
+engine,KEEP
 engineer,DROP
 engineering,DROP
 enhanced,DROP
 enhancement,DROP
-enjoyable,DROP
+enjoyable,KEEP
 enterprise,DROP
-entertainment,DROP
+entertainment,KEEP
 enthusiast,DROP
 enthusiasts,DROP
 entire,DROP
@@ -724,9 +724,9 @@ equipment,DROP
 equity,DROP
 equivalent,DROP
 era,DROP
-ergonomic,DROP
-ergonomics,DROP
-erratic,DROP
+ergonomic,KEEP
+ergonomics,KEEP
+erratic,KEEP
 error,DROP
 ess,DROP
 essential,DROP
@@ -754,18 +754,18 @@ excessive,DROP
 excited,DROP
 excitement,DROP
 exclusive,DROP
-exclusivity,DROP
+exclusivity,KEEP
 execution,DROP
 executive,DROP
 exercise,DROP
-expandability,DROP
-expandable,DROP
+expandability,KEEP
+expandable,KEEP
 expansion,DROP
 expansive,DROP
 expectation,DROP
 expense,DROP
-expensive,DROP
-experience,DROP
+expensive,KEEP
+experience,KEEP
 experienced,DROP
 experiences,DROP
 experiential,DROP
@@ -789,30 +789,30 @@ extra,DROP
 extreme,DROP
 exyno,DROP
 exynos,DROP
-exynos chip,DROP
-exynos chipset,DROP
-exynos processor,DROP
+exynos chip,KEEP
+exynos chipset,KEEP
+exynos processor,KEEP
 eye,DROP
 face,DROP
 face id,KEEP
 facebook,DROP
-facetime,DROP
+facetime,KEEP
 facial,DROP
 fact,DROP
 factor,DROP
 factors,DROP
 failure,DROP
 fair,DROP
-familiar,DROP
+familiar,KEEP
 family,DROP
 famous,DROP
-fan,DROP
+fan,KEEP
 fashion,DROP
-fashionable,DROP
-fast,DROP
-fastest,DROP
+fashionable,KEEP
+fast,KEEP
+fastest,KEEP
 fatigue,DROP
-faulty,DROP
+faulty,KEEP
 favor,DROP
 favorite,DROP
 fcc,DROP
@@ -835,29 +835,29 @@ film,DROP
 fine,DROP
 finesse,DROP
 fingerprint,KEEP
-finicky,DROP
-finish,DROP
+finicky,KEEP
+finish,KEEP
 fire,DROP
 firm,DROP
-firmware,DROP
+firmware,KEEP
 fit,DROP
-fitness,DROP
+fitness,KEEP
 fix,DROP
 fixing,DROP
 flagship,DROP
-flagship device,DROP
+flagship device,KEEP
 flagship iphones,DROP
-flagship model,DROP
-flagship phone,DROP
+flagship model,KEEP
+flagship phone,KEEP
 flagships,DROP
 flair,DROP
-flashy,DROP
+flashy,KEEP
 flat,DROP
 flaw,DROP
-flawless,DROP
-flexibility,DROP
-flexible,DROP
-flimsy,DROP
+flawless,KEEP
+flexibility,KEEP
+flexible,KEEP
+flimsy,KEEP
 flip,DROP
 fluctuation,DROP
 fluid,DROP
@@ -865,9 +865,9 @@ focus,DROP
 focused,DROP
 fold,DROP
 foldable,KEEP
-folding,DROP
+folding,KEEP
 following,DROP
-font,DROP
+font,KEEP
 footprint,DROP
 force,DROP
 forefront,DROP
@@ -877,11 +877,11 @@ forrester,DROP
 fortnite,DROP
 forum,DROP
 foundation,DROP
-fps,DROP
-fragile,DROP
-fragility,DROP
-fragmentation,DROP
-fragmented,DROP
+fps,KEEP
+fragile,KEEP
+fragility,KEEP
+fragmentation,KEEP
+fragmented,KEEP
 frame,DROP
 franchise,DROP
 fray,DROP
@@ -892,23 +892,23 @@ frenzy,DROP
 frequency,DROP
 frequent,DROP
 friend,DROP
-friendliness,DROP
-friendly,DROP
+friendliness,KEEP
+friendly,KEEP
 frill,DROP
-frustrated,DROP
-frustrating,DROP
-frustration,DROP
+frustrated,KEEP
+frustrating,KEEP
+frustration,KEEP
 full,DROP
 function,DROP
-functional,DROP
-functionality,DROP
+functional,KEEP
+functionality,KEEP
 fusion,DROP
 fuss,DROP
 future,DROP
-futuristic,DROP
+futuristic,KEEP
 fwc,DROP
 g,DROP
-g chipset,DROP
+g chipset,KEEP
 gadget,DROP
 gain,DROP
 galaxies,DROP
@@ -917,10 +917,10 @@ galaxy series,DROP
 game,DROP
 gamer,DROP
 games,DROP
-gaming,DROP
+gaming,KEEP
 gamut,DROP
 gap,DROP
-garageband,DROP
+garageband,KEEP
 garena,DROP
 gartner,DROP
 gates,DROP
@@ -936,17 +936,17 @@ generous,DROP
 genuine,DROP
 geographic,DROP
 geography,DROP
-gesture,DROP
-gestures,DROP
+gesture,KEEP
+gestures,KEEP
 getting,DROP
 gflop,DROP
 gflops,DROP
 ghz,DROP
 giant,DROP
 giants,DROP
-glass,DROP
-glitch,DROP
-glitchy,DROP
+glass,KEEP
+glitch,KEEP
+glitchy,KEEP
 global,DROP
 globe,DROP
 gmail,DROP
@@ -958,13 +958,13 @@ google device,DROP
 google drive,DROP
 google pixel,DROP
 google pixels,DROP
-google play store,DROP
+google play store,KEEP
 google product,DROP
 google push,DROP
 googol,DROP
 gorilla,DROP
 government,DROP
-gps,DROP
+gps,KEEP
 gpu,KEEP
 gpu performance,KEEP
 gpus,KEEP
@@ -975,7 +975,7 @@ graphics,KEEP
 great,DROP
 green,DROP
 ground,DROP
-groundbreaking,DROP
+groundbreaking,KEEP
 group,DROP
 growth,DROP
 guarantee,DROP
@@ -985,7 +985,7 @@ guideline,DROP
 habit,DROP
 habits,DROP
 hacker,DROP
-hacking,DROP
+hacking,KEEP
 half,DROP
 hallmark,DROP
 hand,DROP
@@ -993,25 +993,25 @@ handling,DROP
 handoff,DROP
 happy,DROP
 hard,DROP
-hardware,DROP
-hardware reliability,DROP
+hardware,KEEP
+hardware reliability,KEEP
 harmony,DROP
 harmonyo,DROP
 harmonyos,DROP
 hassle,DROP
 hd,DROP
-hdr,DROP
+hdr,KEEP
 head,DROP
-headphone,DROP
-headset,DROP
+headphone,KEEP
+headset,KEEP
 health,DROP
 healthcare,DROP
-healthkit,DROP
+healthkit,KEEP
 healthy,DROP
 heart,DROP
 heat,DROP
-heavy,DROP
-hefty,DROP
+heavy,KEEP
+hefty,KEEP
 helio,DROP
 help,DROP
 helpful,DROP
@@ -1027,7 +1027,7 @@ historical,DROP
 history,DROP
 hole,DROP
 home,DROP
-homekit,DROP
+homekit,KEEP
 homogenization,DROP
 honest,DROP
 honorable,DROP
@@ -1043,12 +1043,12 @@ humor,DROP
 humorous,DROP
 hungry,DROP
 hype,DROP
-hyperlapse,DROP
+hyperlapse,KEEP
 hz,DROP
 ice,DROP
-icloud,DROP
+icloud,KEEP
 icon,DROP
-iconic,DROP
+iconic,KEEP
 id,DROP
 idea,DROP
 ideal,DROP
@@ -1062,8 +1062,8 @@ image,DROP
 imagery,DROP
 images,DROP
 imaging,KEEP
-imessage,DROP
-immersive,DROP
+imessage,KEEP
+immersive,KEEP
 immune,DROP
 imore,DROP
 imovie,DROP
@@ -1075,24 +1075,24 @@ importance,DROP
 important,DROP
 impossible,DROP
 impression,DROP
-impressive,DROP
+impressive,KEEP
 improved,DROP
 improvement,DROP
 improvements,DROP
-inaccessible,DROP
-inadequate,DROP
-inbox,DROP
+inaccessible,KEEP
+inadequate,KEEP
+inbox,KEEP
 inch,DROP
 inclusion,DROP
-inclusivity,DROP
+inclusivity,KEEP
 income,DROP
-incompatibility,DROP
-incompatible,DROP
+incompatibility,KEEP
+incompatible,KEEP
 incomplete,DROP
 inconsistency,DROP
-inconsistent,DROP
-inconvenience,DROP
-inconvenient,DROP
+inconsistent,KEEP
+inconvenience,KEEP
+inconvenient,KEEP
 incorporates,DROP
 increase,DROP
 incredible,DROP
@@ -1107,7 +1107,7 @@ industrial,DROP
 industry,DROP
 infamous,DROP
 infection,DROP
-inferior,DROP
+inferior,KEEP
 infinity,DROP
 influential,DROP
 information,DROP
@@ -1117,11 +1117,11 @@ inherent,DROP
 initial,DROP
 initially,DROP
 initiative,DROP
-innovation,DROP
-innovations,DROP
-innovative,DROP
+innovation,KEEP
+innovations,KEEP
+innovative,KEEP
 input,DROP
-insecure,DROP
+insecure,KEEP
 insight,DROP
 insights,DROP
 inspection,DROP
@@ -1138,36 +1138,36 @@ integrated,DROP
 integration,KEEP
 intel,DROP
 intelligence,DROP
-intelligent,DROP
+intelligent,KEEP
 intense,DROP
 intensive,DROP
 interaction,DROP
 interest,DROP
 interested,DROP
 interesting,DROP
-interface,DROP
+interface,KEEP
 intermittent,DROP
 internal,DROP
 international,DROP
 internet,DROP
-interoperability,DROP
+interoperability,KEEP
 intersect,DROP
 intertek,DROP
 interval,DROP
 introduce,DROP
 introduction,DROP
 introspective,DROP
-intrusive,DROP
-intuitive,DROP
-invasive,DROP
+intrusive,KEEP
+intuitive,KEEP
+invasive,KEEP
 investigation,DROP
 investment,DROP
 involvement,DROP
 ion,DROP
-ion battery,DROP
+ion battery,KEEP
 ios,DROP
 ipad,DROP
-ipados,DROP
+ipados,KEEP
 ipads,DROP
 iphone,DROP
 iphone battery,KEEP
@@ -1184,7 +1184,7 @@ issues,DROP
 item,DROP
 iteration,DROP
 iterative,DROP
-itunes,DROP
+itunes,KEEP
 jack,DROP
 janoff,DROP
 job,DROP
@@ -1195,7 +1195,7 @@ july,DROP
 june,DROP
 k,DROP
 key,DROP
-keyboard,DROP
+keyboard,KEEP
 kid,DROP
 king,DROP
 kirin,DROP
@@ -1208,35 +1208,35 @@ kpi,DROP
 labor,DROP
 lack,DROP
 lacking,DROP
-lackluster,DROP
-lag,DROP
-laggy,DROP
+lackluster,KEEP
+lag,KEEP
+laggy,KEEP
 landscape,DROP
 language,DROP
-laptop,DROP
+laptop,KEEP
 large,DROP
 larry,DROP
 lasting,DROP
 late,DROP
-latency,DROP
+latency,KEEP
 later,DROP
 launch,DROP
-launcher,DROP
+launcher,KEEP
 launching,DROP
 layer,DROP
-layout,DROP
-lcd,DROP
+layout,KEEP
+lcd,KEEP
 lead,DROP
 leader,DROP
 leadership,DROP
 leap,DROP
 learning,DROP
-led,DROP
+led,KEEP
 lee,DROP
 legendary,DROP
 len,DROP
 lens,KEEP
-lense,DROP
+lense,KEEP
 less,DROP
 letter,DROP
 lettering,DROP
@@ -1247,14 +1247,14 @@ library,DROP
 licensing,DROP
 lie,DROP
 life,DROP
-lifespan,DROP
+lifespan,KEEP
 lifestyle,DROP
 lifetime,DROP
-light,DROP
-lighting,DROP
-lightning,DROP
-lightning charger,DROP
-lightweight,DROP
+light,KEEP
+lighting,KEEP
+lightning,KEEP
+lightning charger,KEEP
+lightweight,KEEP
 like,DROP
 likely,DROP
 liking,DROP
@@ -1280,12 +1280,12 @@ llc,DROP
 load,DROP
 loading,DROP
 location,DROP
-lock,DROP
+lock,KEEP
 locks,DROP
 logo,DROP
 long,DROP
 longest,DROP
-longevity,DROP
+longevity,KEEP
 look,DROP
 loop,DROP
 loose,DROP
@@ -1297,9 +1297,9 @@ low,DROP
 lowdown,DROP
 loyal,DROP
 loyalty,DROP
-lte,DROP
-luxurious,DROP
-luxury,DROP
+lte,KEEP
+luxurious,KEEP
+luxury,KEEP
 m,DROP
 mac,DROP
 macbook,DROP
@@ -1308,7 +1308,7 @@ machine,DROP
 macintosh,DROP
 macos,DROP
 macs,DROP
-magnetic,DROP
+magnetic,KEEP
 magsafe,KEEP
 magsafe charging,KEEP
 mah,DROP
@@ -1319,8 +1319,8 @@ maintenance,DROP
 major,DROP
 majority,DROP
 making,DROP
-malfunction,DROP
-malfunctioning,DROP
+malfunction,KEEP
+malfunctioning,KEEP
 mali,DROP
 malware,DROP
 management,DROP
@@ -1332,7 +1332,7 @@ manufacturer,DROP
 manufacturing,DROP
 manufacturing process,DROP
 map,DROP
-maps,DROP
+maps,KEEP
 margin,DROP
 mark,DROP
 market,DROP
@@ -1343,8 +1343,8 @@ marshmallow,DROP
 mass,DROP
 massive,DROP
 match,DROP
-material,DROP
-materials,DROP
+material,KEEP
+materials,KEEP
 mathematical,DROP
 matter,DROP
 mature,DROP
@@ -1357,25 +1357,25 @@ mechanism,DROP
 media,DROP
 mediatek,DROP
 medium,DROP
-megapixel,DROP
+megapixel,KEEP
 member,DROP
 meme,DROP
-memorable,DROP
-memory,DROP
+memorable,KEEP
+memory,KEEP
 mentality,DROP
 mention,DROP
 menu,DROP
 message,DROP
-messaging,DROP
-metal,DROP
+messaging,KEEP
+metal,KEEP
 meter,DROP
 method,DROP
 meticulous,DROP
 metric,DROP
 mhz,DROP
 micro,DROP
-microled,DROP
-microsd,DROP
+microled,KEEP
+microsd,KEEP
 mid,DROP
 middle,DROP
 millennial,DROP
@@ -1383,31 +1383,31 @@ millennials,DROP
 mind,DROP
 mini,DROP
 minimal,DROP
-minimalism,DROP
-minimalist,DROP
-minimalistic,DROP
+minimalism,KEEP
+minimalist,KEEP
+minimalistic,KEEP
 minor,DROP
 minute,DROP
-mirroring,DROP
+mirroring,KEEP
 miss,DROP
 mission,DROP
 mix,DROP
 mixed,DROP
 ml,DROP
 mobile,DROP
-mobility,DROP
+mobility,KEEP
 mod,DROP
 mode,DROP
 model,DROP
 modeling,DROP
 models,DROP
-modem,DROP
+modem,KEEP
 moderate,DROP
-modern,DROP
+modern,KEEP
 modernity,DROP
 modes,DROP
 modification,DROP
-modular,DROP
+modular,KEEP
 module,DROP
 moment,DROP
 momentum,DROP
@@ -1425,11 +1425,11 @@ mpu,DROP
 ms,DROP
 multi,DROP
 multifaceted,DROP
-multimedia,DROP
+multimedia,KEEP
 multinational,DROP
 multiple,DROP
-multitasking,DROP
-music,DROP
+multitasking,KEEP
+music,KEEP
 nanometer,DROP
 nap,DROP
 narrative,DROP
@@ -1438,7 +1438,7 @@ native,DROP
 natural,DROP
 nature,DROP
 navigate,DROP
-navigation,DROP
+navigation,KEEP
 near,DROP
 necessary,DROP
 necessity,DROP
@@ -1448,36 +1448,36 @@ negative,DROP
 negligible,DROP
 ness,DROP
 nest,DROP
-network,DROP
-networking,DROP
+network,KEEP
+networking,KEEP
 neural,DROP
 neutral,DROP
 new,DROP
 nexus,DROP
-nfc,DROP
+nfc,KEEP
 nicd,DROP
 niche,DROP
 nickel,DROP
 night,DROP
-nlp,DROP
+nlp,KEEP
 nm,DROP
 nod,DROP
-noise,DROP
+noise,KEEP
 non,DROP
 nonprofits,DROP
 normal,DROP
 north,DROP
 notable,DROP
-notch,DROP
+notch,KEEP
 note,DROP
-notebook,DROP
+notebook,KEEP
 notebooks,DROP
 noticeable,DROP
-notification,DROP
+notification,KEEP
 notorious,DROP
 nougat,DROP
 novice,DROP
-npu,DROP
+npu,KEEP
 nuance,DROP
 nuanced,DROP
 number,DROP
@@ -1497,7 +1497,7 @@ offer,DROP
 offering,DROP
 office,DROP
 official,DROP
-offline,DROP
+offline,KEEP
 old,DROP
 oled,KEEP
 one,DROP
@@ -1509,19 +1509,19 @@ open,DROP
 openness,DROP
 openstreetmap,DROP
 operating,DROP
-operating system,DROP
+operating system,KEEP
 operation,DROP
 opinion,DROP
 oppo,DROP
 opportunity,DROP
 optic,DROP
-optical,DROP
+optical,KEEP
 optimal,DROP
 optimization,DROP
-optimization software,DROP
+optimization software,KEEP
 optimizations,DROP
 optimize,DROP
-optimized,DROP
+optimized,KEEP
 optimus,DROP
 option,DROP
 optional,DROP
@@ -1532,20 +1532,20 @@ orientation,DROP
 original,DROP
 originated,DROP
 orqualcomm,DROP
-os,DROP
+os,KEEP
 other,DROP
-outdated,DROP
+outdated,KEEP
 outline,DROP
-outperforms,DROP
-outstanding,DROP
+outperforms,KEEP
+outstanding,KEEP
 overall,DROP
-overcharging,DROP
+overcharging,KEEP
 overhaul,DROP
 overhead,DROP
-overheating,DROP
+overheating,KEEP
 overkill,DROP
 overnight,DROP
-overpriced,DROP
+overpriced,KEEP
 overview,DROP
 overwhelming,DROP
 owner,DROP
@@ -1554,12 +1554,12 @@ oxide,DROP
 pace,DROP
 pack,DROP
 package,DROP
-packaging,DROP
+packaging,KEEP
 packed,DROP
 pad,DROP
 page,DROP
 palette,DROP
-panel,DROP
+panel,KEEP
 panels,DROP
 paper,DROP
 par,DROP
@@ -1578,20 +1578,20 @@ past,DROP
 paste,DROP
 patch,DROP
 patching,DROP
-patchy,DROP
+patchy,KEEP
 path,DROP
 patience,DROP
 pattern,DROP
 paul,DROP
 pay,DROP
-payment,DROP
+payment,KEEP
 pc,DROP
 pcmag,DROP
 peace,DROP
 peak,DROP
 peer,DROP
-pen,DROP
-pencil,DROP
+pen,KEEP
+pencil,KEEP
 people,DROP
 perceive,DROP
 perception,DROP
@@ -1600,29 +1600,29 @@ perfect,DROP
 perfection,DROP
 perfectionism,DROP
 performance,KEEP
-performance capability,DROP
-performance tensor chip,DROP
-performant,DROP
+performance capability,KEEP
+performance tensor chip,KEEP
+performant,KEEP
 performer,DROP
 period,DROP
 periodic,DROP
-periscope,DROP
+periscope,KEEP
 permission,DROP
 person,DROP
 personal,DROP
 personality,DROP
-personalization,DROP
-personalized,DROP
+personalization,KEEP
+personalized,KEEP
 perspective,DROP
 philosophy,DROP
-phone,DROP
-photo,DROP
+phone,KEEP
+photo,KEEP
 photographer,DROP
-photography,DROP
-photos,DROP
+photography,KEEP
+photos,KEEP
 physical,DROP
 pick,DROP
-picture,DROP
+picture,KEEP
 pictureasso,DROP
 pioneer,DROP
 pipeline,DROP
@@ -1633,19 +1633,19 @@ pixel series,DROP
 pixel series device,DROP
 pixel smartphone,DROP
 pixelbook,DROP
-pixels,DROP
+pixels,KEEP
 place,DROP
 placement,DROP
 plan,DROP
-plastic,DROP
-plasticky,DROP
-platform,DROP
+plastic,KEEP
+plasticky,KEEP
+platform,KEEP
 play,DROP
-playback,DROP
+playback,KEEP
 player,DROP
-playful,DROP
-playfulness,DROP
-pleasing,DROP
+playful,KEEP
+playfulness,KEEP
+pleasing,KEEP
 pleasure,DROP
 plenty,DROP
 plus,DROP
@@ -1654,17 +1654,17 @@ point,DROP
 points,DROP
 policy,DROP
 polish,DROP
-polished,DROP
+polished,KEEP
 polymer,DROP
-poor,DROP
-popular,DROP
+poor,KEEP
+popular,KEEP
 popularity,DROP
-port,DROP
-portability,DROP
-portable,DROP
+port,KEEP
+portability,KEEP
+portable,KEEP
 portfolio,DROP
 portion,DROP
-portrait,DROP
+portrait,KEEP
 position,DROP
 positioned,DROP
 positioning,DROP
@@ -1674,43 +1674,43 @@ possible,DROP
 post,DROP
 posture,DROP
 potential,DROP
-power,DROP
-powerful,DROP
+power,KEEP
+powerful,KEEP
 powerhouse,DROP
-powersave,DROP
-powersaving,DROP
-powershare,DROP
-ppi,DROP
-practicality,DROP
+powersave,KEEP
+powersaving,KEEP
+powershare,KEEP
+ppi,KEEP
+practicality,KEEP
 practice,DROP
 pragmatism,DROP
 praise,DROP
 praised,DROP
 pre,DROP
-precise,DROP
-precision,DROP
+precise,KEEP
+precision,KEEP
 predecessor,DROP
-predictable,DROP
+predictable,KEEP
 preference,DROP
 preferences,DROP
 preferred,DROP
-premium,DROP
+premium,KEEP
 presence,DROP
 present,DROP
 preservation,DROP
 pressure,DROP
-prestige,DROP
+prestige,KEEP
 prevalent,DROP
 previous,DROP
-price,DROP
-price point,DROP
-price range,DROP
-price tag,DROP
-pricey,DROP
-pricier,DROP
-pricing,DROP
+price,KEEP
+price point,KEEP
+price range,KEEP
+price tag,KEEP
+pricey,KEEP
+pricier,KEEP
+pricing,KEEP
 pricing strategy,DROP
-pricy,DROP
+pricy,KEEP
 pride,DROP
 primary,DROP
 prime,DROP
@@ -1718,26 +1718,26 @@ principle,DROP
 prioritize,DROP
 priority,DROP
 privacy,KEEP
-private,DROP
+private,KEEP
 privilege,DROP
 pro,DROP
 proactive,DROP
 problem,DROP
 procedure,DROP
 process,DROP
-processing,DROP
+processing,KEEP
 processing power,KEEP
-processing speed,DROP
-processor,DROP
-processor speed,DROP
-processors,DROP
+processing speed,KEEP
+processor,KEEP
+processor speed,KEEP
+processors,KEEP
 procurement,DROP
 product,DROP
 product lineup,DROP
 production,DROP
-productivity,DROP
+productivity,KEEP
 products,DROP
-professional,DROP
+professional,KEEP
 professionals,DROP
 profile,DROP
 profit,DROP
@@ -1758,10 +1758,10 @@ pronounced,DROP
 proof,DROP
 proper,DROP
 proposition,DROP
-proprietary,DROP
+proprietary,KEEP
 prospect,DROP
 protect,DROP
-protection,DROP
+protection,KEEP
 protector,DROP
 protocol,DROP
 protrusion,DROP
@@ -1781,27 +1781,27 @@ pursuit,DROP
 push,DROP
 q,DROP
 qa,DROP
-qhd,DROP
+qhd,KEEP
 qi,DROP
-qled,DROP
+qled,KEEP
 quad,DROP
 qualcomm,DROP
-qualcomm chip,DROP
-qualcomm snapdragon,DROP
-quality,DROP
+qualcomm chip,KEEP
+qualcomm snapdragon,KEEP
+quality,KEEP
 quality display,KEEP
-quality product,DROP
+quality product,KEEP
 query,DROP
 question,DROP
-quick,DROP
+quick,KEEP
 quickcharge,KEEP
 quirk,DROP
 radeon,DROP
-radio,DROP
-ram,DROP
-ram capability,DROP
-ram capacity,DROP
-ram option,DROP
+radio,KEEP
+ram,KEEP
+ram capability,KEEP
+ram capacity,KEEP
+ram option,KEEP
 random,DROP
 range,DROP
 ranking,DROP
@@ -1815,9 +1815,9 @@ rave,DROP
 raw,DROP
 rdna,DROP
 reach,DROP
-readable,DROP
+readable,KEEP
 real,DROP
-realism,DROP
+realism,KEEP
 reality,DROP
 realm,DROP
 reason,DROP
@@ -1827,25 +1827,25 @@ receive,DROP
 receives,DROP
 recent,DROP
 recharge,DROP
-recharging,DROP
+recharging,KEEP
 recognition,DROP
 recognizable,DROP
 recognized,DROP
 recommendation,DROP
-recommendations,DROP
+recommendations,KEEP
 record,DROP
-recording,DROP
-recyclability,DROP
-recycling,DROP
+recording,KEEP
+recyclability,KEEP
+recycling,KEEP
 red,DROP
 reduced,DROP
 reduction,DROP
-refined,DROP
+refined,KEEP
 refinement,DROP
 refresh,DROP
 refreshe,DROP
 refreshing,DROP
-refrigerator,DROP
+refrigerator,KEEP
 refurbishing,DROP
 regard,DROP
 regarded,DROP
@@ -1860,28 +1860,28 @@ release,DROP
 releases,DROP
 releases android,DROP
 relevant,DROP
-reliability,DROP
-reliability concern,DROP
-reliability issue,DROP
-reliability rating,DROP
-reliable,DROP
+reliability,KEEP
+reliability concern,KEEP
+reliability issue,KEEP
+reliability rating,KEEP
+reliable,KEEP
 reliance,DROP
 reliant,DROP
 relief,DROP
 remarkable,DROP
-reminder,DROP
+reminder,KEEP
 removable,DROP
 removal,DROP
-rendering,DROP
+rendering,KEEP
 renewable,DROP
 renowned,DROP
 rental,DROP
-repair,DROP
-repairability,DROP
-repairable,DROP
+repair,KEEP
+repairability,KEEP
+repairable,KEEP
 repairshark,DROP
 repeat,DROP
-replaceable,DROP
+replaceable,KEEP
 replacement,DROP
 report,DROP
 reported,DROP
@@ -1891,7 +1891,7 @@ representation,DROP
 representative,DROP
 represented,DROP
 reproduction,DROP
-reputable,DROP
+reputable,KEEP
 reputation,DROP
 requirement,DROP
 res,DROP
@@ -1901,7 +1901,7 @@ researcher,DROP
 reseller,DROP
 reserve,DROP
 resistance,DROP
-resistance rating,DROP
+resistance rating,KEEP
 resistant,DROP
 resolution,KEEP
 resonant,DROP
@@ -1913,8 +1913,8 @@ respondent,DROP
 response,DROP
 responsibility,DROP
 responsible,DROP
-responsive,DROP
-responsiveness,DROP
+responsive,KEEP
+responsiveness,KEEP
 rest,DROP
 restart,DROP
 restriction,DROP
@@ -1923,15 +1923,15 @@ result,DROP
 retail,DROP
 retailer,DROP
 retention,DROP
-retina,DROP
-retro,DROP
+retina,KEEP
+retro,KEEP
 return,DROP
 revenue,DROP
 revenue growth,DROP
 review,DROP
 reviewer,DROP
 reviews,DROP
-revolutionary,DROP
+revolutionary,KEEP
 reward,DROP
 rich,DROP
 richness,DROP
@@ -1944,20 +1944,20 @@ risk,DROP
 rival,DROP
 rivalry,DROP
 rob,DROP
-robust,DROP
-robustness,DROP
+robust,KEEP
+robustness,KEEP
 role,DROP
 rollout,DROP
 rollout process,DROP
-rom,DROP
+rom,KEEP
 ronald,DROP
 room,DROP
 rooted,DROP
-rooting,DROP
+rooting,KEEP
 rough,DROP
 rounded,DROP
-rugged,DROP
-ruggedness,DROP
+rugged,KEEP
+ruggedness,KEEP
 run,DROP
 rundown,DROP
 runs,DROP
@@ -1966,7 +1966,7 @@ s,DROP
 s series,DROP
 saas,DROP
 safari,DROP
-safe,DROP
+safe,KEEP
 sale,DROP
 samsung,DROP
 samsung device,DROP
@@ -1978,22 +1978,22 @@ san,DROP
 sandwich,DROP
 sanghoe,DROP
 sans,DROP
-satellite,DROP
+satellite,KEEP
 satisfaction,DROP
 satisfied,DROP
-satisfying,DROP
-saturation,DROP
+satisfying,KEEP
+saturation,KEEP
 save,DROP
 saver,DROP
 saving,DROP
-saving mode,DROP
+saving mode,KEEP
 savvy,DROP
-scalable,DROP
+scalable,KEEP
 scale,DROP
 scam,DROP
 scan,DROP
 scandinavian,DROP
-scanning,DROP
+scanning,KEEP
 scarcity,DROP
 scenario,DROP
 scene,DROP
@@ -2009,19 +2009,19 @@ screw,DROP
 scrutiny,DROP
 sd,DROP
 se,DROP
-seamless,DROP
-search,DROP
+seamless,KEEP
+search,KEEP
 second,DROP
-secure,DROP
-security,DROP
-security patch,DROP
+secure,KEEP
+security,KEEP
+security patch,KEEP
 segment,DROP
 select,DROP
 selection,DROP
 self,DROP
-selfie,DROP
+selfie,KEEP
 selling,DROP
-semiconductor,DROP
+semiconductor,KEEP
 senior,DROP
 sense,DROP
 sensibility,DROP
@@ -2038,20 +2038,20 @@ series,DROP
 series chip,DROP
 series processor,DROP
 serif,DROP
-server,DROP
+server,KEEP
 service,DROP
 services,DROP
 session,DROP
 set,DROP
 setting,DROP
 settings,DROP
-setup,DROP
+setup,KEEP
 shade,DROP
 shallow,DROP
-shape,DROP
+shape,KEEP
 share,DROP
 sharing,DROP
-sharp,DROP
+sharp,KEEP
 shattering,DROP
 sheer,DROP
 sheet,DROP
@@ -2069,82 +2069,82 @@ shot,DROP
 shutdown,DROP
 sight,DROP
 sign,DROP
-signal,DROP
+signal,KEEP
 significant,DROP
 silicon,DROP
 silver,DROP
 sim,DROP
 similar,DROP
 similarities,DROP
-simple,DROP
-simplicity,DROP
+simple,KEEP
+simplicity,KEEP
 simplification,DROP
 simplifie,DROP
-simpllicity,DROP
+simpllicity,KEEP
 single,DROP
-siri,DROP
+siri,KEEP
 situation,DROP
-size,DROP
+size,KEEP
 sized,DROP
 skin,DROP
 slate,DROP
-sleek,DROP
-sleeker,DROP
-sleekness,DROP
+sleek,KEEP
+sleeker,KEEP
+sleekness,KEEP
 slides,DROP
 slight,DROP
-slim,DROP
+slim,KEEP
 slogan,DROP
-slot,DROP
-slow,DROP
-slowdown,DROP
-sluggish,DROP
+slot,KEEP
+slow,KEEP
+slowdown,KEEP
+sluggish,KEEP
 sm,DROP
-small,DROP
+small,KEEP
 smart,DROP
-smartphone,DROP
-smartphones,DROP
+smartphone,KEEP
+smartphones,KEEP
 smartthings,DROP
 smartwatch,KEEP
 smartwatche,DROP
 sme,DROP
-smooth,DROP
-smoother,DROP
+smooth,KEEP
+smoother,KEEP
 snagging,DROP
-snapdragon,DROP
-snapdragon processor,DROP
+snapdragon,KEEP
+snapdragon processor,KEEP
 snapdragon series,DROP
 snapper,DROP
-snappiness,DROP
-snappy,DROP
-soc,DROP
+snappiness,KEEP
+snappy,KEEP
+soc,KEEP
 social,DROP
-socs,DROP
-software,DROP
-software performance,DROP
-software update,DROP
+socs,KEEP
+software,KEEP
+software performance,KEEP
+software update,KEEP
 solid,DROP
 solution,DROP
 solutions,DROP
 solving,DROP
 sony,DROP
-sophisticated,DROP
-sophistication,DROP
-sound,DROP
+sophisticated,KEEP
+sophistication,KEEP
+sound,KEEP
 source,DROP
 south,DROP
 space,DROP
 span,DROP
 spare,DROP
-speaker,DROP
+speaker,KEEP
 spec,DROP
 specialized,DROP
 specific,DROP
 specification,DROP
 spectrum,DROP
-speed,DROP
-speeds,DROP
-speedy,DROP
+speed,KEEP
+speeds,KEEP
+speedy,KEEP
 spill,DROP
 spirit,DROP
 split,DROP
@@ -2154,11 +2154,11 @@ spuden,DROP
 spy,DROP
 sqc,DROP
 square,DROP
-ssd,DROP
+ssd,KEEP
 ssnlf,DROP
-stability,DROP
-stabilization,DROP
-stable,DROP
+stability,KEEP
+stabilization,KEEP
+stable,KEEP
 stack,DROP
 stadia,DROP
 stage,DROP
@@ -2181,7 +2181,7 @@ station,DROP
 statista,DROP
 status,DROP
 steady,DROP
-steel,DROP
+steel,KEEP
 steep,DROP
 steeper,DROP
 stellar,DROP
@@ -2190,19 +2190,19 @@ steve,DROP
 stiff,DROP
 stock,DROP
 stop,DROP
-storage,DROP
-storage option,DROP
+storage,KEEP
+storage option,KEEP
 store,DROP
 stores,DROP
 storytelling,DROP
-straightforward,DROP
+straightforward,KEEP
 straining,DROP
 stranger,DROP
 strategies,DROP
 strategy,DROP
 stream,DROP
-streaming,DROP
-streamlined,DROP
+streaming,KEEP
+streamlined,KEEP
 strength,DROP
 strengths,DROP
 strict,DROP
@@ -2213,17 +2213,17 @@ stuck,DROP
 student,DROP
 studio,DROP
 study,DROP
-stunning,DROP
-sturdy,DROP
-stuttering,DROP
-style,DROP
-stylish,DROP
+stunning,KEEP
+sturdy,KEEP
+stuttering,KEEP
+style,KEEP
+stylish,KEEP
 stylized,DROP
-stylus,DROP
-subdued,DROP
+stylus,KEEP
+subdued,KEEP
 subject,DROP
 subjective,DROP
-subpar,DROP
+subpar,KEEP
 subsequent,DROP
 subsidiary,DROP
 substance,DROP
@@ -2249,29 +2249,29 @@ supports,DROP
 supremacy,DROP
 sure,DROP
 surface,DROP
-surveillance,DROP
+surveillance,KEEP
 survey,DROP
-sustainability,DROP
-sustainable,DROP
+sustainability,KEEP
+sustainable,KEEP
 sweet,DROP
 swift,DROP
 switch,DROP
 switching,DROP
 symbian,DROP
 symbol,DROP
-synchronization,DROP
+synchronization,KEEP
 synonymous,DROP
 system,DROP
 systems,DROP
 t,DROP
 tab,DROP
 table,DROP
-tablet,DROP
-tactile,DROP
+tablet,KEEP
+tactile,KEEP
 tad,DROP
 tag,DROP
 tailwind,DROP
-tailwind cpu,DROP
+tailwind cpu,KEEP
 takeaway,DROP
 takeaways,DROP
 taking,DROP
@@ -2296,7 +2296,7 @@ technology,DROP
 techradar,DROP
 tegra,DROP
 telephoto,KEEP
-television,DROP
+television,KEEP
 temperature,DROP
 tempest,DROP
 tend,DROP
@@ -2314,9 +2314,9 @@ tflop,DROP
 thank,DROP
 theft,DROP
 theme,DROP
-thermal,DROP
+thermal,KEEP
 thick,DROP
-thin,DROP
+thin,KEEP
 thing,DROP
 think,DROP
 thinker,DROP
@@ -2325,18 +2325,18 @@ thinning,DROP
 thorough,DROP
 threaded,DROP
 threat,DROP
-throttling,DROP
+throttling,KEEP
 tick,DROP
 tier,DROP
 tight,DROP
 tim,DROP
 time,DROP
-timeless,DROP
+timeless,KEEP
 timely,DROP
 times,DROP
 tip,DROP
 title,DROP
-tizen,DROP
+tizen,KEEP
 tlc,DROP
 today,DROP
 tone,DROP
@@ -2344,16 +2344,16 @@ tool,DROP
 topic,DROP
 topmost,DROP
 total,DROP
-touch,KEEP
+touch,DROP
 touch id,KEEP
 touchscreen,KEEP
 touchscreens,KEEP
-touchwiz,DROP
-tough,DROP
-tpu,DROP
+touchwiz,KEEP
+tough,KEEP
+tpu,KEEP
 track,DROP
-tracker,DROP
-tracking,DROP
+tracker,KEEP
+tracking,KEEP
 traction,DROP
 trade,DROP
 trading,DROP
@@ -2366,10 +2366,10 @@ transition,DROP
 translate,DROP
 transparency,DROP
 transparent,DROP
-treble,DROP
+treble,KEEP
 trend,DROP
 trends,DROP
-trendy,DROP
+trendy,KEEP
 triangle,DROP
 tricky,DROP
 triple,DROP
@@ -2377,27 +2377,27 @@ trouble,DROP
 troubleshoot,DROP
 troubleshooting,DROP
 true,DROP
-truedepth,DROP
-trust,DROP
-trusted,DROP
+truedepth,KEEP
+trust,KEEP
+trusted,KEEP
 trustpilot,DROP
-trustworthiness,DROP
-trustworthy,DROP
+trustworthiness,KEEP
+trustworthy,KEEP
 tsmc,DROP
 tuesday,DROP
 turn,DROP
 tutorial,DROP
-tv,DROP
+tv,KEEP
 tvo,DROP
 tweak,DROP
 tweaking,DROP
 type,DROP
 typical,DROP
 typing,DROP
-typography,DROP
+typography,KEEP
 ufs,DROP
 uhd,DROP
-ui,DROP
+ui,KEEP
 ui interface,KEEP
 uk,DROP
 ul,DROP
@@ -2408,13 +2408,13 @@ unauthorized,DROP
 unbeatable,DROP
 unchanged,DROP
 understanding,DROP
-understated,DROP
-underwhelming,DROP
+understated,KEEP
+underwhelming,KEEP
 uneven,DROP
 unfamiliar,DROP
 unibodie,DROP
 unified,DROP
-uninspired,DROP
+uninspired,KEEP
 unique,DROP
 unit,DROP
 united,DROP
@@ -2426,39 +2426,39 @@ unmatched,DROP
 unnecessary,DROP
 unnoticed,DROP
 unparalleled,DROP
-unpredictable,DROP
-unreliable,DROP
-unresponsive,DROP
+unpredictable,KEEP
+unreliable,KEEP
+unresponsive,KEEP
 unused,DROP
 up,DROP
 upcoming,DROP
 update,DROP
-update cycle,DROP
+update cycle,KEEP
 update policy,KEEP
 updates,DROP
 upfront,DROP
-upgradability,DROP
-upgradable,DROP
+upgradability,KEEP
+upgradable,KEEP
 upgrade,DROP
-upgradeable,DROP
+upgradeable,KEEP
 upgrades,DROP
 upgrading,DROP
 upper,DROP
 usability,KEEP
 usage,DROP
-usb,DROP
+usb,KEEP
 usd,DROP
 use,DROP
-useful,DROP
+useful,KEEP
 user,DROP
 user experience,KEEP
 user interface,KEEP
 uses,DROP
 usual,DROP
-utilitarian,DROP
+utilitarian,KEEP
 utilization,DROP
 utilizes,DROP
-ux,DROP
+ux,KEEP
 validity,DROP
 valuable,DROP
 value,DROP
@@ -2478,14 +2478,14 @@ vendor,DROP
 verdict,DROP
 verge,DROP
 verizon,DROP
-versatile,DROP
-versatility,DROP
+versatile,KEEP
+versatility,KEEP
 version,DROP
 vertical,DROP
 viable,DROP
-vibrant,DROP
+vibrant,KEEP
 victus,DROP
-video,DROP
+video,KEEP
 videographer,DROP
 view,DROP
 viewing,DROP
@@ -2495,25 +2495,25 @@ visibility,DROP
 vision,DROP
 visual,DROP
 vital,DROP
-vivid,DROP
+vivid,KEEP
 vivo,DROP
-voice,DROP
+voice,KEEP
 volume,DROP
 vulnerability,DROP
-vulnerable,DROP
+vulnerable,KEEP
 w,DROP
 wait,DROP
-wallet,DROP
-wallpaper,DROP
+wallet,KEEP
+wallpaper,KEEP
 war,DROP
 warning,DROP
 warp,DROP
-warranty,DROP
+warranty,KEEP
 waste,DROP
 watch,DROP
-watches,DROP
+watches,KEEP
 watching,DROP
-watchos,DROP
+watchos,KEEP
 water,DROP
 wave,DROP
 waves,DROP
@@ -2528,7 +2528,7 @@ wearables,KEEP
 web,DROP
 website,DROP
 week,DROP
-weight,DROP
+weight,KEEP
 well,DROP
 wellness,DROP
 whimsy,DROP
@@ -2543,7 +2543,7 @@ willing,DROP
 willingness,DROP
 windows,DROP
 winner,DROP
-wireless,DROP
+wireless,KEEP
 wise,DROP
 word,DROP
 work,DROP

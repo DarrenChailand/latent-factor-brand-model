@@ -1,40 +1,38 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 Normalize / group attribute columns in a Brand × Attribute matrix using a local LLM (Ollama).
 
-Input:
-    data/processed/brand_attribute_matrix/filtered.csv
+Inputs:
+  - filtered.csv (brands × attributes)
 
-Output:
-    data/processed/brand_attribute_matrix/attribute_groups.json
-    data/processed/brand_attribute_matrix/attribute_mapping.json
-    data/processed/brand_attribute_matrix/filtered_normalized.csv
+Outputs (written to outdir):
+  - attribute_groups.json
+  - attribute_mapping.json
+  - filtered_normalized.csv
 """
 
+import json
 import os
 import time
-import json
 import textwrap
 from collections import defaultdict
 
-import pandas as pd
 import ollama
+import pandas as pd
 
 
 # =========================
-# 1. LLM client + ask()
+# 1) LLM client + ask()
 # =========================
 
 MODEL = "gemma3:4b"
 
 
 def init_client() -> ollama.Client:
-    """
-    Initialize the Ollama client and optionally warm up the model.
-    """
+    """Initialize the Ollama client and optionally warm up the model."""
     client = ollama.Client()
 
-    # Warm up so the model is loaded into RAM (optional but nice)
     _ = client.generate(
         model=MODEL,
         prompt="OK",
@@ -52,9 +50,7 @@ CLIENT = init_client()
 
 
 def ask(prompt: str) -> str:
-    """
-    Send a prompt to the Ollama model and return its text response.
-    """
+    """Send a prompt to the Ollama model and return its text response."""
     t0 = time.time()
     r = CLIENT.generate(
         model=MODEL,
@@ -73,7 +69,7 @@ def ask(prompt: str) -> str:
 
 
 # =========================
-# 2. Prompt construction
+# 2) Prompt construction
 # =========================
 
 def build_grouping_prompt(attributes, brand_names):
@@ -81,14 +77,11 @@ def build_grouping_prompt(attributes, brand_names):
     Build a prompt asking the LLM to group attributes and normalize phrasing,
     using the actual matrix brands as context.
 
-    Note: brands are *not always* technology brands; treat them as general
-    product / service brands (could be tech, fashion, food, etc.).
+    Note: brands are not always technology brands; treat them as general product/service brands.
     """
-    # Compress brand list into a readable context string
     if len(brand_names) <= 15:
         brands_context = ", ".join(brand_names)
     else:
-        # Show a sample + count
         sample = ", ".join(list(brand_names)[:10])
         brands_context = f"{sample}, ... (total {len(brand_names)} brands)"
 
@@ -164,55 +157,41 @@ def build_grouping_prompt(attributes, brand_names):
 
 
 # =========================
-# 3. Grouping + mapping
+# 3) Grouping + mapping
 # =========================
 
 def safe_parse_json(raw: str) -> dict:
     """
-    Try to robustly extract JSON from an LLM response that might be:
+    Extract JSON from an LLM response that might be:
     - empty
     - wrapped in ```json ... ```
-    - have extra text before/after the JSON.
-
-    Raises a clear error if nothing JSON-like is found.
+    - have extra text before/after JSON
     """
     if raw is None:
         raise ValueError("LLM returned None instead of a string.")
 
     txt = raw.strip()
-
     if not txt:
-        # This is exactly the error you're hitting: empty string → JSONDecodeError.
         raise ValueError(
             "LLM returned an empty response. "
             "Check that MODEL is correct and that client.generate(...) is working."
         )
 
-    # If the response is wrapped in ```...``` fences, strip them.
     if txt.startswith("```"):
-        # Strip leading and trailing fences safely
-        # (anything like ```json ... ``` or ``` ...)
         lines = txt.splitlines()
-        # Drop first and last line if they look like fences
         if lines and lines[0].strip().startswith("```"):
             lines = lines[1:]
         if lines and lines[-1].strip().startswith("```"):
             lines = lines[:-1]
         txt = "\n".join(lines).strip()
 
-    # At this point txt may still have extra explanation text.
-    # Try to locate the first '{' and the last '}' and parse that slice.
     first_brace = txt.find("{")
     last_brace = txt.rfind("}")
 
     if first_brace == -1 or last_brace == -1 or last_brace < first_brace:
-        # No JSON-looking content found
         print("=== RAW LLM RESPONSE (no JSON braces found) ===")
         print(raw)
-        raise ValueError(
-            "Could not find JSON object in LLM response. "
-            "Check the prompt or log the raw response above."
-        )
+        raise ValueError("Could not find JSON object in LLM response.")
 
     candidate = txt[first_brace:last_brace + 1]
 
@@ -230,17 +209,12 @@ def group_attributes_with_llm(attributes, brand_names, chunk_size=60):
     """
     Use the LLM to group/normalize attribute names.
 
-    - If there are many attributes, we process them in chunks to avoid hitting
-      context limits.
-    - Optionally, a 2nd pass merges canonical names across chunks.
-
     Returns:
-        all_groups: list of { "canonical": str, "members": [str, ...] }
+      all_groups: list of {"canonical": str, "members": [str, ...]}
     """
     attributes = [a.strip() for a in attributes if a.strip()]
     all_groups = []
 
-    # First pass: group within each chunk
     for start in range(0, len(attributes), chunk_size):
         chunk = attributes[start:start + chunk_size]
         print(f"[LLM] Grouping attributes {start}–{start + len(chunk) - 1} / {len(attributes)}")
@@ -250,7 +224,6 @@ def group_attributes_with_llm(attributes, brand_names, chunk_size=60):
         groups = data.get("groups", [])
         all_groups.extend(groups)
 
-    # Optional second pass: unify canonical names if multiple chunks
     if len(attributes) > chunk_size:
         canonical_names = sorted({g["canonical"] for g in all_groups})
         print(f"[LLM] Second-pass merge over {len(canonical_names)} canonical names")
@@ -259,23 +232,18 @@ def group_attributes_with_llm(attributes, brand_names, chunk_size=60):
         merged_data = safe_parse_json(raw)
         merged_groups = merged_data.get("groups", [])
 
-        # Map old canonical name -> final canonical
         canonical_to_final = {}
         for g in merged_groups:
             final_canon = g["canonical"]
             for member in g.get("members", []):
                 canonical_to_final[member] = final_canon
 
-        # Rebuild all_groups with final canonicals
         new_all_groups = []
         for g in all_groups:
             old_canon = g["canonical"]
             final_canon = canonical_to_final.get(old_canon, old_canon)
             new_all_groups.append(
-                {
-                    "canonical": final_canon,
-                    "members": g.get("members", []),
-                }
+                {"canonical": final_canon, "members": g.get("members", [])}
             )
         all_groups = new_all_groups
 
@@ -283,9 +251,7 @@ def group_attributes_with_llm(attributes, brand_names, chunk_size=60):
 
 
 def build_attr_to_canonical(groups):
-    """
-    Convert list of groups into a flat mapping: original_attr -> canonical_attr.
-    """
+    """Convert list of groups into a flat mapping: original_attr -> canonical_attr."""
     mapping = {}
     for g in groups:
         canon = g["canonical"]
@@ -296,51 +262,55 @@ def build_attr_to_canonical(groups):
 
 def apply_attribute_mapping(df, attr_to_canonical):
     """
-    Given the original df and a mapping original -> canonical attribute,
-    return a new df where:
+    Given df and mapping original -> canonical attribute, return a new df where:
       - columns are canonical attribute names
-      - counts of synonym columns are summed.
+      - synonym columns are summed
     """
-    # Ensure every column has a mapping (fallback: itself)
-    complete_mapping = {
-        col: attr_to_canonical.get(col, col)
-        for col in df.columns
-    }
+    complete_mapping = {col: attr_to_canonical.get(col, col) for col in df.columns}
 
-    groups = defaultdict(list)
+    grouped_cols = defaultdict(list)
     for col, canon in complete_mapping.items():
-        groups[canon].append(col)
+        grouped_cols[canon].append(col)
 
     new_cols = {}
-    for canon, cols in groups.items():
+    for canon, cols in grouped_cols.items():
         if len(cols) == 1:
             new_cols[canon] = df[cols[0]]
         else:
             new_cols[canon] = df[cols].sum(axis=1)
 
     new_df = pd.DataFrame(new_cols, index=df.index)
-    # Optional: sort columns alphabetically
     new_df = new_df.reindex(sorted(new_df.columns), axis=1)
     return new_df
 
 
 # =========================
-# 4. Main script
+# Notebook-friendly entry point
 # =========================
 
-def main():
-    # Paths
-    csv_path = "data/processed/brand_attribute_matrix/filtered.csv"
-    groups_path = "data/processed/brand_attribute_matrix/attribute_groups.json"
-    mapping_path = "data/processed/brand_attribute_matrix/attribute_mapping.json"
-    normalized_path = "data/processed/brand_attribute_matrix/filtered_normalized.csv"
+def run_normalize_attributes(
+    input_csv: str,
+    outdir: str = "data/processed/brand_attribute_matrix",
+    chunk_size: int = 60,
+) -> str:
+    """
+    Notebook-friendly wrapper.
 
-    # Ensure output directory exists
-    os.makedirs(os.path.dirname(groups_path), exist_ok=True)
+    Writes:
+      - attribute_groups.json
+      - attribute_mapping.json
+      - filtered_normalized.csv
 
-    # Load brand × attribute matrix
-    print(f"Loading matrix from: {csv_path}")
-    df = pd.read_csv(csv_path, index_col=0)
+    Returns normalized CSV path.
+    """
+    groups_path = os.path.join(outdir, "attribute_groups.json")
+    mapping_path = os.path.join(outdir, "attribute_mapping.json")
+    normalized_path = os.path.join(outdir, "filtered_normalized.csv")
+
+    os.makedirs(outdir, exist_ok=True)
+
+    print(f"Loading matrix from: {input_csv}")
+    df = pd.read_csv(input_csv, index_col=0)
 
     brand_names = list(df.index)
     attributes = list(df.columns)
@@ -348,29 +318,22 @@ def main():
     print(f"Loaded {len(brand_names)} brands and {len(attributes)} attributes.")
     print("Example brands:", brand_names[:5])
 
-    # 1) LLM grouping
-    groups = group_attributes_with_llm(attributes, brand_names)
+    groups = group_attributes_with_llm(attributes, brand_names, chunk_size=chunk_size)
 
-    # 2) Save raw groups
     with open(groups_path, "w", encoding="utf-8") as f:
         json.dump(groups, f, indent=2, ensure_ascii=False)
     print(f"Saved attribute groups to: {groups_path}")
 
-    # 3) Build and save flat mapping
     attr_to_canonical = build_attr_to_canonical(groups)
     with open(mapping_path, "w", encoding="utf-8") as f:
         json.dump(attr_to_canonical, f, indent=2, ensure_ascii=False)
     print(f"Saved attribute mapping to: {mapping_path}")
 
-    # 4) Apply mapping to matrix
     normalized_df = apply_attribute_mapping(df, attr_to_canonical)
     normalized_df.to_csv(normalized_path)
     print(f"Saved normalized brand × attribute matrix to: {normalized_path}")
 
-    # Show a small preview
     print("\n=== Preview of normalized columns ===")
     print(list(normalized_df.columns)[:20])
 
-
-if __name__ == "__main__":
-    main()
+    return normalized_path

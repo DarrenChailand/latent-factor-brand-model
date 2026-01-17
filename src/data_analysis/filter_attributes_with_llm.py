@@ -1,33 +1,42 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
 """
-Filter Brand × Attribute matrix columns using an Ollama LLM.
+Filter Brand × Attribute matrix columns using either:
+- OpenAI (ChatGPT), or
+- a local Ollama model.
 
-Usage (example):
-  python filter_attributes_with_llm.py \
-      --input data/processed/brand_attribute_matrix/raw.csv \
-      --output data/processed/brand_attribute_matrix/filtered.csv \
-      --decisions-log data/processed/brand_attribute_matrix/attribute_decisions.csv
+Inputs:
+  - CSV matrix (rows=brands, cols=attributes, values=counts)
+
+Outputs:
+  - filtered CSV matrix (subset of columns)
+  - optional decisions log CSV (attribute, decision)
 """
 
 import argparse
 import json
 import os
 import time
-from typing import Literal, Dict, List, Optional
-
 from pathlib import Path
+from typing import Dict, List, Literal, Optional
 
-import pandas as pd
 import ollama
+import pandas as pd
+from openai import OpenAI
 
-# ================== Ollama setup (same style as your old script) ==================
 
-client = ollama.Client()
+# ================== Backend config ==================
+
+USE_OPENAI = True
+OPENAI_MODEL = "gpt-5.1"
+
 MODEL = "gemma3:4b"
+client = ollama.Client()
 
-# Warm up so the model is loaded into RAM (optional but nice)
+openai_client = None  # initialized lazily
+
+
+# Warm up Ollama (optional; matches your current behavior)
 _ = client.generate(
     model=MODEL,
     prompt="OK",
@@ -36,10 +45,10 @@ _ = client.generate(
 )
 
 
+# ================== LLM calls ==================
+
 def ask(prompt: str) -> str:
-    """
-    Send a prompt to the Ollama model and return its text response.
-    """
+    """Send a prompt to Ollama and return the text response."""
     t0 = time.time()
     r = client.generate(
         model=MODEL,
@@ -53,12 +62,45 @@ def ask(prompt: str) -> str:
         stream=False,
     )
     dt = time.time() - t0
-    print(f"[{len(r.response)} chars in {dt:.2f}s]")
+    print(f"[Ollama {len(r.response)} chars in {dt:.2f}s]")
     return r.response
 
 
+def init_openai_if_needed():
+    """Initialize OpenAI client (interactive key prompt)."""
+    global openai_client
+
+    if not USE_OPENAI:
+        return
+    if openai_client is not None:
+        return
+
+    print("\n=== OpenAI backend is enabled ===")
+    print("Please enter your OpenAI API key (starting with sk-... or sk-proj-...).")
+    api_key = input("OpenAI API Key: ").strip()
+
+    os.environ["OPENAI_API_KEY"] = api_key
+    openai_client = OpenAI(api_key=api_key)
+    print("OpenAI client initialized.\n")
+
+
+def ask_openai(prompt: str) -> str:
+    """Send a prompt to OpenAI ChatGPT model and return the text response."""
+    init_openai_if_needed()
+
+    t0 = time.time()
+    resp = openai_client.chat.completions.create(
+        model=OPENAI_MODEL,
+        messages=[{"role": "user", "content": prompt.strip()}],
+        temperature=0.0,
+    )
+    text = resp.choices[0].message.content or ""
+    dt = time.time() - t0
+    print(f"[OpenAI {OPENAI_MODEL} {len(text)} chars in {dt:.2f}s]")
+    return text
+
+
 # ================== Prompt template ==================
-# Note: {brands_context} and {attribute} will be filled in at runtime.  # <<< CHANGED
 
 PROMPT_TEMPLATE = """You are cleaning up columns in a Brand × Attribute matrix.
 
@@ -120,7 +162,6 @@ DROP in ALL these cases:
       e.g. "up", "well", "w", "z", "x"
 
 Borderline case rule:
-- If you are unsure, you MUST choose "DROP".
 - Only choose "KEEP" when the word clearly describes how users perceive or use the product,
   or a concrete component/feature (e.g. "touchscreen", "wearables", "wallet", "zoom").
 
@@ -137,43 +178,32 @@ Return your answer in **exactly** this JSON format with no extra text:
 """
 
 
-
-def build_prompt(attribute: str, brands_context: str) -> str:  # <<< CHANGED
-    """
-    Replace placeholders in the prompt template with:
-      - the actual attribute string
-      - a short description/list of brands present in the matrix
-    """
+def build_prompt(attribute: str, brands_context: str) -> str:
     return PROMPT_TEMPLATE.format(attribute=attribute, brands_context=brands_context)
 
 
-# ================== Core LLM-based classification ==================
+# ================== Classification ==================
 
-def classify_attribute_with_llm(attribute: str, brands_context: str) -> Literal["KEEP", "DROP"]:  # <<< CHANGED
-    """
-    Call the Ollama model with a prompt for this attribute and parse its JSON answer.
-
-    If parsing fails or decision is invalid, default to "DROP"
-    (safer than accidentally keeping junk).
-    """
+def classify_attribute_with_llm(attribute: str, brands_context: str) -> Literal["KEEP", "DROP"]:
+    """Call Ollama or OpenAI depending on USE_OPENAI."""
     prompt = build_prompt(attribute, brands_context)
-    raw = ask(prompt)
 
-    # Try to find JSON in the response.
-    # Model *should* output only JSON, but we defend against noise.
+    raw = ask_openai(prompt) if USE_OPENAI else ask(prompt)
     text = raw.strip()
 
     try:
         start = text.index("{")
         end = text.rindex("}") + 1
-        json_str = text[start:end]
-        data = json.loads(json_str)
+        data = json.loads(text[start:end])
         decision = str(data.get("decision", "")).strip().upper()
+
         if decision not in ("KEEP", "DROP"):
             print(f"  ⚠️ Invalid decision for '{attribute}': {decision!r}, defaulting to DROP")
             return "DROP"
+
         print(f"  → {attribute!r}: {decision}")
-        return decision  # type: ignore[return-value]
+        return decision
+
     except Exception as e:
         print(f"  ⚠️ Failed to parse JSON for '{attribute}': {e}")
         print("  Raw response was:")
@@ -183,25 +213,13 @@ def classify_attribute_with_llm(attribute: str, brands_context: str) -> Literal[
 
 # ================== Matrix filtering ==================
 
-def filter_matrix(
-    input_csv: str,
-    output_csv: str,
-    decisions_csv: Optional[str] = None,
-) -> None:
-    """
-    Load the brand × attribute matrix, ask the LLM for each attribute
-    whether to KEEP or DROP, and write the filtered matrix.
-    """
+def filter_matrix(input_csv: str, output_csv: str, decisions_csv: Optional[str] = None) -> None:
+    """Load matrix, classify each attribute, write filtered output."""
     print(f"Loading matrix from: {input_csv}")
     df = pd.read_csv(input_csv, index_col=0)
 
-    # Build a short context string listing the brands (row index).  # <<< CHANGED
     brands = [str(b) for b in df.index.tolist()]
-    # If there are many brands, truncate the list in the prompt.
-    if len(brands) > 20:
-        brands_context = ", ".join(brands[:20]) + ", ..."
-    else:
-        brands_context = ", ".join(brands)
+    brands_context = ", ".join(brands[:20]) + (", ..." if len(brands) > 20 else "")
 
     kept_columns: List[str] = []
     decisions_log: List[Dict[str, str]] = []
@@ -209,10 +227,11 @@ def filter_matrix(
     total_attrs = len(df.columns)
     print(f"Total attributes (columns): {total_attrs}")
     print(f"Brands in matrix: {brands_context}")
+    print(f"Backend: {'OpenAI ' + OPENAI_MODEL if USE_OPENAI else 'Ollama ' + MODEL}")
 
     for i, attr in enumerate(df.columns):
         print(f"\n[{i+1}/{total_attrs}] Classifying attribute: {attr!r}")
-        decision = classify_attribute_with_llm(attr, brands_context)  # <<< CHANGED
+        decision = classify_attribute_with_llm(attr, brands_context)
         decisions_log.append({"attribute": attr, "decision": decision})
         if decision == "KEEP":
             kept_columns.append(attr)
@@ -227,42 +246,23 @@ def filter_matrix(
     if decisions_csv is not None:
         Path(os.path.dirname(decisions_csv) or ".").mkdir(parents=True, exist_ok=True)
         pd.DataFrame(decisions_log).to_csv(decisions_csv, index=False)
-        print(f"Decisions log written to:   {decisions_csv}")
+        print(f"Decisions log written to: {decisions_csv}")
 
 
-# ================== CLI ==================
+def run_filter_attributes(
+    input_csv: str,
+    output_csv: str = "data/processed/brand_attribute_matrix/filtered.csv",
+    decisions_log_csv: str = "data/processed/brand_attribute_matrix/decisions-log.csv",
+) -> str:
+    """
+    Notebook-friendly wrapper.
 
-def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Filter Brand × Attribute matrix using an Ollama LLM to decide KEEP/DROP per attribute."
-    )
-    parser.add_argument(
-        "--input",
-        type=str,
-        default="data/processed/brand_attribute_matrix/raw.csv",  # <<< CHANGED
-        help="Path to input Brand × Attribute matrix CSV.",
-    )
-    parser.add_argument(
-        "--output",
-        type=str,
-        default="data/processed/brand_attribute_matrix/filtered.csv",
-        help="Path to output filtered matrix CSV.",
-    )
-    parser.add_argument(
-        "--decisions-log",
-        type=str,
-        default="data/processed/brand_attribute_matrix/decisions-log.csv",
-        help="Optional path to save a CSV of {attribute, decision}.",
-    )
-
-    args = parser.parse_args()
-
+    Filters columns in the Brand × Attribute matrix using the existing backend settings.
+    Returns output_csv.
+    """
     filter_matrix(
-        input_csv=args.input,
-        output_csv=args.output,
-        decisions_csv=args.decisions_log,
+        input_csv=input_csv,
+        output_csv=output_csv,
+        decisions_csv=decisions_log_csv,
     )
-
-
-if __name__ == "__main__":
-    main()
+    return output_csv
