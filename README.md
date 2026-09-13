@@ -4,6 +4,12 @@ An end-to-end natural-language processing project that turns brand descriptions 
 
 ![Factor variance](docs/images/factor_variance.png)
 
+## Example result
+
+The included demonstration analyzes **six brands and 39 attributes**. The first three factors capture **75.59%** of the squared singular values. Because three brands have very few observations, this result demonstrates the pipeline but is not yet reliable evidence about consumer perception.
+
+See [`RESULTS.md`](RESULTS.md) for the brand-factor matrix, factor strengths, strongest attribute weights, interpretation, and data-quality warning. The complete input matrix is available at [`data/sample/brand_attribute_counts.csv`](data/sample/brand_attribute_counts.csv), and all generated numerical outputs are under [`results/`](results/).
+
 ## Why this project matters
 
 Brand surveys are expensive and slow. This project tests whether language-model-generated descriptions can support an exploratory brand-perception map. It is a research prototype—not a replacement for consumer research—and explicitly separates generated evidence from validated human opinion.
