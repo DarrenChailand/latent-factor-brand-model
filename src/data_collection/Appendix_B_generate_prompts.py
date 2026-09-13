@@ -1,6 +1,5 @@
 import json
 import re
-import itertools
 import os
 
 def replace_placeholders(text, mapping):

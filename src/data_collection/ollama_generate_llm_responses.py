@@ -1,8 +1,8 @@
-import ollama, os, time
-import json
+import ollama
+import os
 import time
+import json
 from pathlib import Path
-from typing import List
 
 client = ollama.Client()
 MODEL = "llama3.2:1b"

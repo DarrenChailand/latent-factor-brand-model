@@ -1,172 +1,74 @@
-# Brand Perception Mapping Pipeline (LLM → Brand×Attribute → PMI → SVD)
+# Latent-Factor Brand Perception Model
 
-This repo builds a **Brand × Attribute** matrix from LLM-generated text, then derives a latent factor representation using **PMI + SVD**, and finally computes **brand–attribute importance scores**.
+An end-to-end natural-language processing project that turns brand descriptions into an interpretable map of brand associations. It extracts attributes, constructs a brand-by-attribute matrix, applies positive pointwise mutual information (PPMI), and uses singular value decomposition (SVD) to uncover latent positioning factors.
 
-The Jupyter notebook (`brand_attribute_pipeline.ipynb`) **starts from already-generated response data**.  
-Before running the notebook, you must first generate:
+![Factor variance](docs/images/factor_variance.png)
 
-1) prompt files (Appendix A & B)  
-2) response files (Appendix A & B) using a local LLM (Ollama)
+## Why this project matters
 
----
+Brand surveys are expensive and slow. This project tests whether language-model-generated descriptions can support an exploratory brand-perception map. It is a research prototype—not a replacement for consumer research—and explicitly separates generated evidence from validated human opinion.
 
-## Repository structure (expected)
+## Reproducible example
 
-- `data/raw/`
-  - `demo_brand_prompt_config.json` (brands, industries, factors, personas, etc.)
-  - `brand_prompt_templates.json` (prompt templates for Appendix A & B)
-- `data/processed/prompts/`
-  - `Appendix_A_generated_prompts.json`
-  - `Appendix_B_generated_prompts.json`
-- `data/processed/responses/`
-  - `Appendix_A_responses.jsonl`
-  - `Appendix_B_responses.jsonl`
-- `data/processed/brand_attribute_matrix/`
-  - pipeline outputs (raw matrix, filtered, normalized, pmi, svd, importance, etc.)
-- `src/data_analysis/`
-  - analysis scripts (build matrix, filter, normalize, PMI, SVD, importance)
-- `brand_attribute_pipeline.ipynb`
-  - runs the analysis once responses exist
-
----
-
-## Setup
-
-### 1) Create environment and install dependencies
+The repository includes a cleaned six-brand, 39-attribute example matrix:
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate   # macOS/Linux
-# .venv\Scripts\activate    # Windows
-
+source .venv/bin/activate
 pip install -r requirements.txt
-python -m spacy download en_core_web_sm
+python run_pipeline.py
 ```
 
-### 2) Install and run Ollama (required for local generation)
+Results are written to `results/`. No application programming interface key or local language model is required for this example.
 
-You need Ollama installed and running.
+## Method
 
-Models used in this repo (based on your scripts):
+1. Generate prompts across brands, comparison factors, personas, and time frames.
+2. Produce descriptions with a local language model.
+3. Extract brand-linked nouns and adjectives with spaCy.
+4. Filter and merge noisy attributes.
+5. Convert counts to PPMI, reducing the weight of common attributes.
+6. Factorize the matrix as $M \approx U\Sigma V^T$.
+7. Interpret factors using the brands and attributes with the largest loadings.
 
-- `llama3.2:1b` (response generation)
-- `gemma3:4b` (attribute filtering/grouping)
+## Repository structure
 
-Make sure these models are available locally:
+```text
+data/sample/                 Clean example input
+docs/images/                 README figures
+notebooks/                   Exploratory workflow
+src/data_collection/         Optional text generation
+src/data_analysis/           Extraction, PPMI, SVD, and scoring
+tests/                       Numerical and validation tests
+run_pipeline.py              One-command deterministic analysis
+```
+
+## Validation
 
 ```bash
-ollama pull llama3.2:1b
-ollama pull gemma3:4b
+pip install -r requirements-dev.txt
+pytest -q
+ruff check run_pipeline.py src tests
 ```
 
----
+Tests cover input validation, finite non-negative PPMI values, and exact full-rank SVD reconstruction.
 
-## Step-by-step pipeline
+## Research limitations
 
-### Step A — Define brands + prompt configuration
+- Generated descriptions reflect model and prompt choices, not a representative consumer sample.
+- Language-model filtering and grouping introduce model-dependent judgment.
+- Six brands are enough for a demonstration, not stable market estimates.
+- Factor signs and order are arbitrary; interpretation requires inspecting both sets of loadings.
+- A production study needs human labels, repeated runs, baselines, and stability metrics.
 
-Edit:
+## Recommended next evaluation
 
-- `data/raw/demo_brand_prompt_config.json`  
-  brands, industries, comparison_factors, personas, etc.
+Label a stratified sample of brand-attribute pairs with human raters. Report extraction precision and recall, grouping agreement, rank correlation with survey results, and stability under prompt and model changes. Compare PPMI plus SVD against raw frequency and term frequency–inverse document frequency baselines.
 
-- `data/raw/brand_prompt_templates.json`  
-  contains `brand_perception_templates` (Appendix A)  
-  contains `latent_need_templates` (Appendix B)
+## Technology
 
----
+Python, pandas, NumPy, spaCy, matplotlib, Ollama, OpenAI API, PPMI, and SVD.
 
-### Step B — Generate prompts (Appendix A & B)
+## License
 
-Run your two prompt-generation scripts (or equivalent code blocks) to produce:
-
-- `data/processed/prompts/Appendix_A_generated_prompts.json`
-- `data/processed/prompts/Appendix_B_generated_prompts.json`
-
-These prompts are generated by filling template placeholders using:
-
-- brands / industries / factors / personas / temporal modifiers (Appendix A)
-- product categories / usage contexts / demographic targets / temporal framing (Appendix B)
-
----
-
-### Step C — Generate responses using Ollama (Appendix A & B)
-
-Run your response-generation script to produce:
-
-- `data/processed/responses/Appendix_A_responses.jsonl`
-- `data/processed/responses/Appendix_B_responses.jsonl`
-
-Each line in JSONL includes:
-
-- index, prompt, response, timestamps, etc.
-
-This script supports resume by counting existing JSONL lines.
-
----
-
-### Step D — Run the analysis notebook
-
-Now that responses exist, open:
-
-- `brand_attribute_pipeline.ipynb`
-
-The notebook runs the analysis pipeline:
-
-- Build Brand × Attribute matrix from `Appendix_A_responses.jsonl`
-- Filter attributes (LLM-based keep/drop)
-- Normalize/group attributes (LLM-based clustering)
-- Compute PMI matrix
-- Run SVD on PMI
-- Compute brand–attribute importance + per-brand ranked attributes
-
-Outputs are written under:
-
-- `data/processed/brand_attribute_matrix/`
-
----
-
-## Notes on filtering backend (OpenAI vs Ollama)
-
-The attribute filtering step supports:
-
-- OpenAI (ChatGPT) **OR**
-- Ollama local model
-
-This is controlled inside `filter_attributes_with_llm.py` via:
-
-- `USE_OPENAI = True/False`
-
-If using OpenAI, you will be prompted for an API key during execution.
-
----
-
-## Reproducibility
-
-- All generated artifacts are stored in `data/processed/`
-- The pipeline is deterministic except for:
-  - the LLM response generation
-  - the LLM-based filtering/grouping (model-dependent)
-
----
-
-## Troubleshooting
-
-### spaCy model missing
-
-```bash
-python -m spacy download en_core_web_sm
-```
-
-### Ollama connection errors
-
-- Confirm Ollama is installed and running
-- Run `ollama list` to verify models are available
-
-### Empty / invalid JSON from LLM
-
-Your normalization script already includes robust JSON extraction (`safe_parse_json`).
-
-If it still fails, try:
-- reducing chunk size
-- switching models
+MIT

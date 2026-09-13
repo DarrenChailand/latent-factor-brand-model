@@ -1,54 +1,38 @@
-import math
-
+"""Pointwise mutual information for brand-by-attribute count matrices."""
+from pathlib import Path
+import numpy as np
 import pandas as pd
 
+def validate_count_matrix(frame: pd.DataFrame) -> pd.DataFrame:
+    if frame.empty:
+        raise ValueError("The count matrix is empty.")
+    if frame.index.has_duplicates or frame.columns.has_duplicates:
+        raise ValueError("Brand names and attribute names must be unique.")
+    numeric = frame.apply(pd.to_numeric, errors="raise").astype(float)
+    if not np.isfinite(numeric.to_numpy()).all():
+        raise ValueError("The count matrix contains missing or infinite values.")
+    if (numeric < 0).any().any():
+        raise ValueError("Counts cannot be negative.")
+    if numeric.to_numpy().sum() <= 0:
+        raise ValueError("The count matrix must contain at least one positive count.")
+    return numeric
 
-def run_compute_pmi(
-    input_csv: str,
-    output_csv: str = "data/processed/brand_attribute_matrix/pmi.csv",
-):
-    """
-    Compute a PMI (Pointwise Mutual Information) matrix from a brand×attribute
-    frequency matrix.
+def compute_pmi(counts: pd.DataFrame, positive: bool = True) -> pd.DataFrame:
+    """Compute PMI; unseen pairs are zero and negative values can be clipped."""
+    counts = validate_count_matrix(counts)
+    total = counts.to_numpy().sum()
+    expected = np.outer(counts.sum(axis=1), counts.sum(axis=0)) / total
+    observed = counts.to_numpy()
+    values = np.zeros_like(observed, dtype=float)
+    mask = observed > 0
+    values[mask] = np.log(observed[mask] / expected[mask])
+    if positive:
+        values = np.maximum(values, 0.0)
+    return pd.DataFrame(values, index=counts.index, columns=counts.columns)
 
-    Parameters
-    ----------
-    input_csv : str
-        Path to a CSV where rows = brands, columns = attributes, values = counts.
-        The first column should be brand names (index column).
-    output_csv : str
-        Path to write the PMI matrix CSV.
-
-    Returns
-    -------
-    (PMI_df, output_csv) : (pd.DataFrame, str)
-        PMI_df has the same shape/index/columns as the input matrix.
-        Cells with zero count are assigned PMI = 0.0 (by definition here).
-    """
-    # Load
-    df = pd.read_csv(input_csv, index_col=0)
-    F = df.astype(float)
-
-    # Total
-    total = F.values.sum()
-
-    # Probabilities
-    Pij = F / total
-    Pi = F.sum(axis=1) / total
-    Pj = F.sum(axis=0) / total
-
-    # PMI
-    PMI = pd.DataFrame(index=F.index, columns=F.columns, dtype=float)
-    for brand in F.index:
-        for attr in F.columns:
-            if F.loc[brand, attr] == 0:
-                PMI.loc[brand, attr] = 0.0
-            else:
-                numerator = Pij.loc[brand, attr]
-                denominator = Pi.loc[brand] * Pj.loc[attr]
-                PMI.loc[brand, attr] = math.log(numerator / denominator)
-
-    # Save
-    PMI.to_csv(output_csv)
-    print(f"PMI matrix saved → {output_csv}")
-    return PMI, output_csv
+def run_compute_pmi(input_csv: str, output_csv: str, positive: bool = True):
+    result = compute_pmi(pd.read_csv(input_csv, index_col=0), positive=positive)
+    destination = Path(output_csv)
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    result.to_csv(destination)
+    return result, str(destination)

@@ -1,0 +1,950 @@
+{
+  "Amazon": [
+    {
+      "attribute": "charging",
+      "score": 0.9804924645758558
+    },
+    {
+      "attribute": "chip",
+      "score": 0.7282861971914573
+    },
+    {
+      "attribute": "monitor",
+      "score": 0.49297524019196004
+    },
+    {
+      "attribute": "display",
+      "score": 0.4652108409518304
+    },
+    {
+      "attribute": "foldable",
+      "score": 0.3885665731533871
+    },
+    {
+      "attribute": "amoled",
+      "score": 0.377611371016788
+    },
+    {
+      "attribute": "usability",
+      "score": 0.35450266593835367
+    },
+    {
+      "attribute": "wearable",
+      "score": 0.3455054150689329
+    },
+    {
+      "attribute": "camera",
+      "score": 0.2978091083185008
+    },
+    {
+      "attribute": "sensor",
+      "score": 0.2160300916847473
+    },
+    {
+      "attribute": "touch id",
+      "score": 0.20834905450578145
+    },
+    {
+      "attribute": "zoom",
+      "score": 0.20521303181673492
+    },
+    {
+      "attribute": "resolution",
+      "score": 0.20379940699222326
+    },
+    {
+      "attribute": "ai assistant",
+      "score": 0.18379888723701962
+    },
+    {
+      "attribute": "user experience",
+      "score": 0.18379888723701962
+    },
+    {
+      "attribute": "ui interface",
+      "score": 0.16368654030752275
+    },
+    {
+      "attribute": "chipset",
+      "score": 0.15933653406489445
+    },
+    {
+      "attribute": "telephoto",
+      "score": 0.14937701406040738
+    },
+    {
+      "attribute": "autofocus",
+      "score": 0.13384108462742295
+    },
+    {
+      "attribute": "performance",
+      "score": 0.12987630027731117
+    },
+    {
+      "attribute": "battery capacity",
+      "score": 0.11528510501068565
+    },
+    {
+      "attribute": "magsafe",
+      "score": 0.10928265396827132
+    },
+    {
+      "attribute": "smartphone",
+      "score": 0.10699298268766984
+    },
+    {
+      "attribute": "biometric",
+      "score": 0.07363268340100881
+    },
+    {
+      "attribute": "face id",
+      "score": 0.07347487361301193
+    },
+    {
+      "attribute": "touchscreen",
+      "score": 0.07202668141256069
+    },
+    {
+      "attribute": "cpu",
+      "score": 0.05402379026317182
+    },
+    {
+      "attribute": "fingerprint",
+      "score": 0.05109031295469837
+    },
+    {
+      "attribute": "battery life",
+      "score": 0.050576172736165194
+    },
+    {
+      "attribute": "security",
+      "score": 0.047776014102453815
+    },
+    {
+      "attribute": "graphics",
+      "score": 0.03459802654914039
+    },
+    {
+      "attribute": "durability",
+      "score": 0.03149958893027452
+    },
+    {
+      "attribute": "update policy",
+      "score": 0.02446235317212507
+    },
+    {
+      "attribute": "imaging",
+      "score": 0.015287722267765145
+    },
+    {
+      "attribute": "oled",
+      "score": 0.0098286653189731
+    },
+    {
+      "attribute": "compatibility",
+      "score": 0.009372510471628522
+    },
+    {
+      "attribute": "quickcharge",
+      "score": 0.004350006242628073
+    },
+    {
+      "attribute": "gpu",
+      "score": 0.004320093342992596
+    },
+    {
+      "attribute": "integration",
+      "score": -0.002617138551712115
+    }
+  ],
+  "Apple": [
+    {
+      "attribute": "integration",
+      "score": 0.8225795639929128
+    },
+    {
+      "attribute": "gpu",
+      "score": 0.3039020985313252
+    },
+    {
+      "attribute": "charging",
+      "score": 0.2411811182143566
+    },
+    {
+      "attribute": "chip",
+      "score": 0.23141140116385778
+    },
+    {
+      "attribute": "autofocus",
+      "score": 0.16028872137996192
+    },
+    {
+      "attribute": "magsafe",
+      "score": 0.1308774276773455
+    },
+    {
+      "attribute": "display",
+      "score": 0.10913426651155661
+    },
+    {
+      "attribute": "monitor",
+      "score": 0.1085226858978784
+    },
+    {
+      "attribute": "touch id",
+      "score": 0.09377368732925834
+    },
+    {
+      "attribute": "touchscreen",
+      "score": 0.0862594972313586
+    },
+    {
+      "attribute": "foldable",
+      "score": 0.08553834905039064
+    },
+    {
+      "attribute": "amoled",
+      "score": 0.08312669048523638
+    },
+    {
+      "attribute": "face id",
+      "score": 0.07981497832983984
+    },
+    {
+      "attribute": "usability",
+      "score": 0.07803958156317956
+    },
+    {
+      "attribute": "wearable",
+      "score": 0.07605894288106968
+    },
+    {
+      "attribute": "camera",
+      "score": 0.0655591633912307
+    },
+    {
+      "attribute": "telephoto",
+      "score": 0.06080799895645135
+    },
+    {
+      "attribute": "user experience",
+      "score": 0.05619340911364517
+    },
+    {
+      "attribute": "ai assistant",
+      "score": 0.05619340911364517
+    },
+    {
+      "attribute": "battery capacity",
+      "score": 0.0548466249646821
+    },
+    {
+      "attribute": "sensor",
+      "score": 0.047556477228480616
+    },
+    {
+      "attribute": "performance",
+      "score": 0.0458982048659121
+    },
+    {
+      "attribute": "zoom",
+      "score": 0.04517522905476351
+    },
+    {
+      "attribute": "resolution",
+      "score": 0.044864036219301476
+    },
+    {
+      "attribute": "graphics",
+      "score": 0.04143476162995341
+    },
+    {
+      "attribute": "security",
+      "score": 0.04124308103297062
+    },
+    {
+      "attribute": "ui interface",
+      "score": 0.03883124172149648
+    },
+    {
+      "attribute": "durability",
+      "score": 0.03772405795786267
+    },
+    {
+      "attribute": "biometric",
+      "score": 0.03742412761278367
+    },
+    {
+      "attribute": "chipset",
+      "score": 0.035076059056531765
+    },
+    {
+      "attribute": "smartphone",
+      "score": 0.026350823549547722
+    },
+    {
+      "attribute": "update policy",
+      "score": 0.02111735005711328
+    },
+    {
+      "attribute": "fingerprint",
+      "score": 0.018904852297736564
+    },
+    {
+      "attribute": "cpu",
+      "score": 0.013239993225957841
+    },
+    {
+      "attribute": "imaging",
+      "score": 0.013197266037030203
+    },
+    {
+      "attribute": "battery life",
+      "score": 0.011133748026830865
+    },
+    {
+      "attribute": "compatibility",
+      "score": 0.008090905365918494
+    },
+    {
+      "attribute": "oled",
+      "score": 0.006462737273984691
+    },
+    {
+      "attribute": "quickcharge",
+      "score": 0.0037551826649646182
+    }
+  ],
+  "Google": [
+    {
+      "attribute": "integration",
+      "score": 0.22556686941830237
+    },
+    {
+      "attribute": "charging",
+      "score": 0.09818865812535121
+    },
+    {
+      "attribute": "chip",
+      "score": 0.0866614516339184
+    },
+    {
+      "attribute": "autofocus",
+      "score": 0.04682990146101817
+    },
+    {
+      "attribute": "monitor",
+      "score": 0.0459551505458228
+    },
+    {
+      "attribute": "display",
+      "score": 0.045168016223608186
+    },
+    {
+      "attribute": "magsafe",
+      "score": 0.03823710732006512
+    },
+    {
+      "attribute": "foldable",
+      "score": 0.036222174889321355
+    },
+    {
+      "attribute": "amoled",
+      "score": 0.03520093097603414
+    },
+    {
+      "attribute": "usability",
+      "score": 0.033046737551664714
+    },
+    {
+      "attribute": "wearable",
+      "score": 0.03220801385016243
+    },
+    {
+      "attribute": "touch id",
+      "score": 0.03200243153265419
+    },
+    {
+      "attribute": "camera",
+      "score": 0.027761764265006095
+    },
+    {
+      "attribute": "touchscreen",
+      "score": 0.025201547062352964
+    },
+    {
+      "attribute": "face id",
+      "score": 0.023745214139645733
+    },
+    {
+      "attribute": "user experience",
+      "score": 0.02144948514868755
+    },
+    {
+      "attribute": "ai assistant",
+      "score": 0.02144948514868755
+    },
+    {
+      "attribute": "telephoto",
+      "score": 0.021257563986692693
+    },
+    {
+      "attribute": "sensor",
+      "score": 0.020138324557506606
+    },
+    {
+      "attribute": "zoom",
+      "score": 0.0191299582661202
+    },
+    {
+      "attribute": "resolution",
+      "score": 0.018998180163835695
+    },
+    {
+      "attribute": "battery capacity",
+      "score": 0.018484837390225436
+    },
+    {
+      "attribute": "ui interface",
+      "score": 0.016026305620084908
+    },
+    {
+      "attribute": "chipset",
+      "score": 0.01485335127084799
+    },
+    {
+      "attribute": "performance",
+      "score": 0.013433255414024839
+    },
+    {
+      "attribute": "security",
+      "score": 0.012882529450536877
+    },
+    {
+      "attribute": "biometric",
+      "score": 0.012434798321137665
+    },
+    {
+      "attribute": "graphics",
+      "score": 0.012105566676721068
+    },
+    {
+      "attribute": "durability",
+      "score": 0.011021448681275064
+    },
+    {
+      "attribute": "smartphone",
+      "score": 0.010741332333426315
+    },
+    {
+      "attribute": "fingerprint",
+      "score": 0.006773523924048944
+    },
+    {
+      "attribute": "update policy",
+      "score": 0.00659613387783953
+    },
+    {
+      "attribute": "cpu",
+      "score": 0.0054056939930084
+    },
+    {
+      "attribute": "battery life",
+      "score": 0.004714710684489907
+    },
+    {
+      "attribute": "imaging",
+      "score": 0.004122247032240356
+    },
+    {
+      "attribute": "compatibility",
+      "score": 0.002527243941223187
+    },
+    {
+      "attribute": "gpu",
+      "score": 0.0022899094357402613
+    },
+    {
+      "attribute": "oled",
+      "score": 0.002095572174877555
+    },
+    {
+      "attribute": "quickcharge",
+      "score": 0.0011729543492368846
+    }
+  ],
+  "Microsoft": [
+    {
+      "attribute": "integration",
+      "score": 2.3147200686332408
+    },
+    {
+      "attribute": "autofocus",
+      "score": 0.33329827674883694
+    },
+    {
+      "attribute": "magsafe",
+      "score": 0.27214155016419617
+    },
+    {
+      "attribute": "touchscreen",
+      "score": 0.17936472094178804
+    },
+    {
+      "attribute": "face id",
+      "score": 0.16297176767652724
+    },
+    {
+      "attribute": "touch id",
+      "score": 0.10046386421855497
+    },
+    {
+      "attribute": "chip",
+      "score": 0.09338852647583006
+    },
+    {
+      "attribute": "graphics",
+      "score": 0.08615786893717615
+    },
+    {
+      "attribute": "security",
+      "score": 0.07991488337803102
+    },
+    {
+      "attribute": "durability",
+      "score": 0.07844197271699435
+    },
+    {
+      "attribute": "battery capacity",
+      "score": 0.0635384181196402
+    },
+    {
+      "attribute": "telephoto",
+      "score": 0.054772605833910755
+    },
+    {
+      "attribute": "biometric",
+      "score": 0.04701177963737329
+    },
+    {
+      "attribute": "update policy",
+      "score": 0.04091814977930881
+    },
+    {
+      "attribute": "imaging",
+      "score": 0.025571755306423485
+    },
+    {
+      "attribute": "user experience",
+      "score": 0.019328396100645674
+    },
+    {
+      "attribute": "ai assistant",
+      "score": 0.019328396100645674
+    },
+    {
+      "attribute": "compatibility",
+      "score": 0.015677387395552963
+    },
+    {
+      "attribute": "fingerprint",
+      "score": 0.013648719391556156
+    },
+    {
+      "attribute": "oled",
+      "score": 0.010755495054787229
+    },
+    {
+      "attribute": "quickcharge",
+      "score": 0.007276250396859292
+    },
+    {
+      "attribute": "cpu",
+      "score": -0.003532061966491778
+    },
+    {
+      "attribute": "performance",
+      "score": -0.00547104560327191
+    },
+    {
+      "attribute": "smartphone",
+      "score": -0.0066316495791167804
+    },
+    {
+      "attribute": "battery life",
+      "score": -0.0068529613612569535
+    },
+    {
+      "attribute": "ui interface",
+      "score": -0.014313503281803964
+    },
+    {
+      "attribute": "gpu",
+      "score": -0.01602628967693594
+    },
+    {
+      "attribute": "chipset",
+      "score": -0.021589753678663358
+    },
+    {
+      "attribute": "resolution",
+      "score": -0.027614376217244174
+    },
+    {
+      "attribute": "zoom",
+      "score": -0.02780591930517671
+    },
+    {
+      "attribute": "sensor",
+      "score": -0.02927160738135024
+    },
+    {
+      "attribute": "camera",
+      "score": -0.04035248619905419
+    },
+    {
+      "attribute": "display",
+      "score": -0.04459429773822142
+    },
+    {
+      "attribute": "wearable",
+      "score": -0.04681523198530564
+    },
+    {
+      "attribute": "usability",
+      "score": -0.04803433990174107
+    },
+    {
+      "attribute": "amoled",
+      "score": -0.051165519159557124
+    },
+    {
+      "attribute": "foldable",
+      "score": -0.052649925212551726
+    },
+    {
+      "attribute": "charging",
+      "score": -0.06336215449772827
+    },
+    {
+      "attribute": "monitor",
+      "score": -0.06679707242213212
+    }
+  ],
+  "Nvidia": [
+    {
+      "attribute": "gpu",
+      "score": 4.11143241726852
+    },
+    {
+      "attribute": "performance",
+      "score": 0.1701715797539896
+    },
+    {
+      "attribute": "autofocus",
+      "score": 0.07058319009382162
+    },
+    {
+      "attribute": "magsafe",
+      "score": 0.057631917437550376
+    },
+    {
+      "attribute": "touchscreen",
+      "score": 0.03798439739278891
+    },
+    {
+      "attribute": "face id",
+      "score": 0.024779441127396988
+    },
+    {
+      "attribute": "touch id",
+      "score": 0.022301477515233203
+    },
+    {
+      "attribute": "chip",
+      "score": 0.01849881740603782
+    },
+    {
+      "attribute": "graphics",
+      "score": 0.01824581063121996
+    },
+    {
+      "attribute": "durability",
+      "score": 0.016611801073877677
+    },
+    {
+      "attribute": "battery capacity",
+      "score": 0.014003899386330095
+    },
+    {
+      "attribute": "telephoto",
+      "score": 0.012377253650830455
+    },
+    {
+      "attribute": "biometric",
+      "score": 0.010290171090471078
+    },
+    {
+      "attribute": "fingerprint",
+      "score": 0.003168963855645467
+    },
+    {
+      "attribute": "quickcharge",
+      "score": -0.0001899305285680999
+    },
+    {
+      "attribute": "oled",
+      "score": -0.0003618373867763413
+    },
+    {
+      "attribute": "compatibility",
+      "score": -0.0004092237501737113
+    },
+    {
+      "attribute": "imaging",
+      "score": -0.0006674944836781454
+    },
+    {
+      "attribute": "update policy",
+      "score": -0.0010680783908932731
+    },
+    {
+      "attribute": "battery life",
+      "score": -0.0011255750850162989
+    },
+    {
+      "attribute": "cpu",
+      "score": -0.0012471482942795929
+    },
+    {
+      "attribute": "security",
+      "score": -0.00208600243430358
+    },
+    {
+      "attribute": "smartphone",
+      "score": -0.002474254760477702
+    },
+    {
+      "attribute": "chipset",
+      "score": -0.003546042003057061
+    },
+    {
+      "attribute": "ui interface",
+      "score": -0.003735972531625156
+    },
+    {
+      "attribute": "resolution",
+      "score": -0.004535565315473483
+    },
+    {
+      "attribute": "zoom",
+      "score": -0.00456702560192758
+    },
+    {
+      "attribute": "ai assistant",
+      "score": -0.004614120393949933
+    },
+    {
+      "attribute": "user experience",
+      "score": -0.004614120393949933
+    },
+    {
+      "attribute": "sensor",
+      "score": -0.004807759774204523
+    },
+    {
+      "attribute": "camera",
+      "score": -0.006627755606634628
+    },
+    {
+      "attribute": "wearable",
+      "score": -0.007689239139713176
+    },
+    {
+      "attribute": "usability",
+      "score": -0.007889473377782091
+    },
+    {
+      "attribute": "display",
+      "score": -0.008375399684863914
+    },
+    {
+      "attribute": "amoled",
+      "score": -0.008403758687960405
+    },
+    {
+      "attribute": "foldable",
+      "score": -0.008647567222873156
+    },
+    {
+      "attribute": "monitor",
+      "score": -0.010971186981359649
+    },
+    {
+      "attribute": "charging",
+      "score": -0.014367396990528265
+    },
+    {
+      "attribute": "integration",
+      "score": -0.027263861395105272
+    }
+  ],
+  "Samsung": [
+    {
+      "attribute": "charging",
+      "score": 0.9614018447621714
+    },
+    {
+      "attribute": "chip",
+      "score": 0.707803549422994
+    },
+    {
+      "attribute": "monitor",
+      "score": 0.48492649387063314
+    },
+    {
+      "attribute": "display",
+      "score": 0.45679748663390524
+    },
+    {
+      "attribute": "foldable",
+      "score": 0.38222249434115074
+    },
+    {
+      "attribute": "amoled",
+      "score": 0.37144615644702766
+    },
+    {
+      "attribute": "usability",
+      "score": 0.3487147443639134
+    },
+    {
+      "attribute": "wearable",
+      "score": 0.3398643905066207
+    },
+    {
+      "attribute": "camera",
+      "score": 0.2929468155102397
+    },
+    {
+      "attribute": "sensor",
+      "score": 0.2125029948571937
+    },
+    {
+      "attribute": "zoom",
+      "score": 0.2018625437997706
+    },
+    {
+      "attribute": "resolution",
+      "score": 0.20047199905449695
+    },
+    {
+      "attribute": "touch id",
+      "score": 0.19917129410541026
+    },
+    {
+      "attribute": "ai assistant",
+      "score": 0.17886341542779916
+    },
+    {
+      "attribute": "user experience",
+      "score": 0.17886341542779916
+    },
+    {
+      "attribute": "ui interface",
+      "score": 0.16067002914698247
+    },
+    {
+      "attribute": "chipset",
+      "score": 0.15673506600352
+    },
+    {
+      "attribute": "telephoto",
+      "score": 0.14357142928424307
+    },
+    {
+      "attribute": "performance",
+      "score": 0.1263287667928729
+    },
+    {
+      "attribute": "autofocus",
+      "score": 0.11588285494323647
+    },
+    {
+      "attribute": "battery capacity",
+      "score": 0.10985003461793517
+    },
+    {
+      "attribute": "smartphone",
+      "score": 0.10490210029330864
+    },
+    {
+      "attribute": "magsafe",
+      "score": 0.09461957046201598
+    },
+    {
+      "attribute": "biometric",
+      "score": 0.06987272031884971
+    },
+    {
+      "attribute": "face id",
+      "score": 0.06456457752616925
+    },
+    {
+      "attribute": "touchscreen",
+      "score": 0.06236244645961509
+    },
+    {
+      "attribute": "cpu",
+      "score": 0.0529760725792802
+    },
+    {
+      "attribute": "battery life",
+      "score": 0.04975042176315792
+    },
+    {
+      "attribute": "fingerprint",
+      "score": 0.0493328853337054
+    },
+    {
+      "attribute": "security",
+      "score": 0.0432176057110921
+    },
+    {
+      "attribute": "graphics",
+      "score": 0.029955809929941367
+    },
+    {
+      "attribute": "durability",
+      "score": 0.02727310754347152
+    },
+    {
+      "attribute": "update policy",
+      "score": 0.02212834942427911
+    },
+    {
+      "attribute": "imaging",
+      "score": 0.013829089043973269
+    },
+    {
+      "attribute": "oled",
+      "score": 0.009139532875758246
+    },
+    {
+      "attribute": "compatibility",
+      "score": 0.008478259848494124
+    },
+    {
+      "attribute": "quickcharge",
+      "score": 0.003934963143462263
+    },
+    {
+      "attribute": "gpu",
+      "score": -0.01635902832848388
+    },
+    {
+      "attribute": "integration",
+      "score": -0.10379833303648552
+    }
+  ]
+}
